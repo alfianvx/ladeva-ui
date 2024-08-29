@@ -1,53 +1,75 @@
-import Badge from "./ui/badge";
+import Image from "next/image";
+
+const items = [
+  {
+    id: 1,
+    logo: "/3d/smartphone.svg",
+    title: "24 Hours support service",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat at, iste quae quis ea dolorem sunt harum, mollitia quibusdam, deleniti dolore ad qui atque! Quos ipsa asperiores similique qui incidunt alias reiciendis molestiae quia.",
+  },
+  {
+    id: 2,
+    logo: "/3d/coin.svg",
+    title: "Transparent Fees",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat at, iste quae quis ea dolorem sunt harum, mollitia quibusdam, deleniti dolore ad qui atque! Quos ipsa asperiores similique qui incidunt alias reiciendis molestiae quia.",
+  },
+  {
+    id: 3,
+    logo: "/3d/calendar.svg",
+    title: "On Time",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat at, iste quae quis ea dolorem sunt harum, mollitia quibusdam, deleniti dolore ad qui atque! Quos ipsa asperiores similique qui incidunt alias reiciendis molestiae quia.",
+  },
+  {
+    id: 4,
+    logo: "/3d/projector.svg",
+    title: "Support Feature Addition",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat at, iste quae quis ea dolorem sunt harum, mollitia quibusdam, deleniti dolore ad qui atque! Quos ipsa asperiores similique qui incidunt alias reiciendis molestiae quia.",
+  },
+  {
+    id: 5,
+    logo: "/3d/folder.svg",
+    title: "Officialy Listed on Mulitple Platforms",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat at, iste quae quis ea dolorem sunt harum, mollitia quibusdam, deleniti dolore ad qui atque! Quos ipsa asperiores similique qui incidunt alias reiciendis molestiae quia.",
+  },
+  {
+    id: 6,
+    logo: "/3d/rocket.svg",
+    title: "Latest Technology",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat at, iste quae quis ea dolorem sunt harum, mollitia quibusdam, deleniti dolore ad qui atque! Quos ipsa asperiores similique qui incidunt alias reiciendis molestiae quia.",
+  },
+];
 
 export default function Services() {
   return (
-    <div className="bg-[length:200%_400px] md:bg-[length:150%_400px] bg-top bg-no-repeat bg-[radial-gradient(ellipse_25%_70%_at_50%_-10%,rgba(99,100,250,0.3),rgba(255,255,255,0))] w-full mx-auto">
-      <div className="flex flex-col items-center justify-center max-w-6xl py-10 mx-auto">
-        <Badge>Our Services</Badge>
-        <h1 className="text-2xl font-semibold text-center md:text-4xl text-stone-100">
-          Elevate your brand online.
-        </h1>
-        <h1 className="text-2xl font-semibold text-center md:text-4xl text-stone-100">
-          Crafted for growth.
-        </h1>
-        <p className="mx-auto mt-6 text-sm text-center  md:mt-8 text-pretty text-stone-300">
-          Transform your online presence with user-friendly design and strategic
-          development with Ladeva Software House.
-        </p>
-        <div className="flex flex-col gap-4 py-10 md:flex-row">
-          <div className="overflow-hidden border rounded-md border-stone-800">
-            <div className="w-full h-80 bg-stone-400/5"></div>
-            <div className="flex flex-col items-center justify-center p-5 space-y-3">
-              <h1 className="text-xl font-semibold">Web & App Design</h1>
-              <p className="text-sm text-center">
-                Front-end development, back-end development & full-stack
-                development.
-              </p>
+    <section className="flex flex-col items-center justify-center mx-auto mb-20 max-w-7xl">
+      <h1 className="text-4xl font-semibold">
+        Great Apps , zero-hassle<span className="text-ladeva">.</span>
+      </h1>
+      <span className="max-w-4xl py-5 text-center">
+        When you hire us, you will get the whole team with all of our creative
+        power. Not just 1-man-show with couple of outsourced designers like many
+        others.
+      </span>
+      <div className="grid grid-cols-3 gap-5">
+        {items.map((item) => (
+          <div
+            className="px-5 py-3 transition duration-150 ease-in-out border rounded-lg cursor-pointer hover:border-yellow-400 "
+            key={item.id}
+          >
+            <div className="flex items-center gap-2 pb-1">
+              <Image src={item.logo} alt="3d-icon" width={70} height={70} />
+              <h1 className="text-base font-medium">{item.title}</h1>
             </div>
+            <p className="text-sm ">{item.description}</p>
           </div>
-          <div className="overflow-hidden border rounded-md border-stone-800">
-            <div className="w-full h-80 bg-stone-400/5"></div>
-            <div className="flex flex-col items-center justify-center p-5 space-y-3">
-              <h1 className="text-xl font-semibold">Web & App Design</h1>
-              <p className="text-sm text-center">
-                Front-end development, back-end development & full-stack
-                development.
-              </p>
-            </div>
-          </div>
-          <div className="overflow-hidden border rounded-md border-stone-800">
-            <div className="w-full h-80 bg-stone-400/5"></div>
-            <div className="flex flex-col items-center justify-center p-5 space-y-3">
-              <h1 className="text-xl font-semibold">Web & App Design</h1>
-              <p className="text-sm text-center">
-                Front-end development, back-end development & full-stack
-                development.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }

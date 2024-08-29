@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { TracingBeam } from "@/components/ui/tracing-beams";
+import Header from "@/components/header";
 
-const hankenGrotesk = Hanken_Grotesk({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Ladeva Software House",
@@ -18,12 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={hankenGrotesk.className}>
-        <TracingBeam className="w-full bg-stone-800">
-          <Navbar />
-          {children}
-          <Footer />
-        </TracingBeam>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
