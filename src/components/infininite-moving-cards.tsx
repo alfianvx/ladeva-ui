@@ -1,7 +1,5 @@
 "use client";
-
 import { cn } from "@/lib/utils";
-import { ArrowBottomLeftIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -74,15 +72,12 @@ export const InfiniteMovingCards = ({
   return (
     <div
       ref={containerRef}
-      className={cn(
-        "scroller relative z-20  w-full overflow-hidden",
-        className
-      )}
+      className={cn("scroller relative z-20 w-full overflow-hidden", className)}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -91,7 +86,7 @@ export const InfiniteMovingCards = ({
           <li key={item.id} className="cursor-pointer">
             <Image
               src={item.src}
-              alt="double-check-icon"
+              alt="product-image"
               className=""
               width={400}
               height={400}

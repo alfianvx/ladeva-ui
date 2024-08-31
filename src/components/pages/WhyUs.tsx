@@ -6,12 +6,12 @@ import Closing from "../closing";
 export default function WhyUs() {
   return (
     <main className="h-full">
-      <div className="max-w-5xl mx-auto pt-48 pb-16">
-        <h1 className="text-6xl font-bold text-center">
+      <div className="max-w-5xl px-5 pt-48 pb-16 mx-auto md:px-0">
+        <h1 className="text-3xl font-bold text-center md:text-6xl">
           What make us special
           <span className="text-ladeva">.</span>
         </h1>
-        <p className="max-w-lg mx-auto py-5 text-center">
+        <p className="max-w-lg py-3 mx-auto text-sm text-center md:text-base md:py-5">
           There are tons of other similar services out there. Then what make us
           stand out over the rest?
         </p>
@@ -22,12 +22,12 @@ export default function WhyUs() {
           height={300}
           className="mx-auto"
         />
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-4xl font-bold">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold md:text-4xl">
             Reflect Your bussiness Uniqueness
             <span className="text-ladeva">.</span>
           </h2>
-          <p className="py-5 text-balance">
+          <p className="py-5 text-sm md:text-base text-balance">
             Ladeva is more than just a software development company. We are your
             partners in creating digital solutions tailored to meet the unique
             needs of your business. Our technical expertise, combined with a
@@ -36,11 +36,14 @@ export default function WhyUs() {
             experience.
           </p>
           <p className="font-semibold">Our Strength :</p>
-          <div className="pl-5 py-3">
-            <ol className="list-decimal list-outside space-y-2">
+          <div className="py-3 pl-5">
+            <ol className="space-y-2 list-decimal list-outside">
               {features.map((feature, index) => (
-                <li key={index} className="[ol_&]:marker:font-bold">
-                  <span className="font-bold mr-1">{feature.title}</span>
+                <li
+                  key={index}
+                  className="[ol_&]:marker:font-bold text-sm md:text-base"
+                >
+                  <span className="mr-1 font-bold">{feature.title}</span>
                   {feature.description}
                 </li>
               ))}
@@ -53,11 +56,11 @@ export default function WhyUs() {
             height={300}
             className="mx-auto"
           />
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-2xl font-bold md:text-4xl">
             Transparent Payment
             <span className="text-ladeva">.</span>
           </h2>
-          <p className="py-3">
+          <p className="py-3 text-sm text-pretty md:text-base">
             At Ladeva, we like to keep things simple and straightforward. Before
             we kick off any project, you&apos;ll get a detailed budget proposal
             (RAB) that breaks down all the costs involved. This way, you know
@@ -65,7 +68,7 @@ export default function WhyUs() {
             on you. We believe in being upfront, so you can plan your budget
             without any guesswork.
           </p>
-          <p className="py-3">
+          <p className="py-3 text-sm text-pretty md:text-base">
             At Ladeva, we like to keep things simple and straightforward. Before
             we kick off any project, you&apos;ll get a detailed budget proposal
             (RAB) that breaks down all the costs involved. This way, you know

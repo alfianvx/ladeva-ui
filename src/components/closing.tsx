@@ -1,50 +1,54 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Closing() {
   return (
-    <section className="flex flex-col py-20 bg-black items-center justify-center w-full mx-auto">
-      <h1 className="text-5xl py-5 max-w-4xl font-bold text-white text-center">
+    <section className="flex flex-col items-center justify-center w-full px-5 py-10 mx-auto bg-black md:py-20 md:px-0">
+      <h1 className="max-w-4xl py-5 text-3xl font-bold text-center text-white md:text-5xl">
         Digitalize your business with us just one click away
         <span className="text-ladeva">.</span>
       </h1>
-      <div className="grid grid-cols-3 mt-5 mb-10">
-        <div className="flex items-center justify-center text-white">
-          <Image
-            src={"/icons/double-check-orange.svg"}
-            alt="double-check-icon"
-            className="mr-2"
-            width={30}
-            height={30}
-          />
-          Transparent cost
-        </div>
-        <div className="flex items-center justify-center text-white">
-          <Image
-            src={"/icons/double-check-orange.svg"}
-            alt="double-check-icon"
-            className="mr-2"
-            width={30}
-            height={30}
-          />
-          Latest telcology
-        </div>
-        <div className="flex items-center justify-center text-white">
-          <Image
-            src={"/icons/double-check-orange.svg"}
-            alt="double-check-icon"
-            className="mr-2"
-            width={30}
-            height={30}
-          />
-          Fast Working Process
-        </div>
+      <div className="grid items-center my-5 space-y-4 md:space-y-0 md:grid-cols-3">
+        {offers.map((offer) => (
+          <div
+            key={offer.id}
+            className="flex items-center justify-center text-sm text-white md:text-base"
+          >
+            <Image
+              src={"/icons/double-check-orange.svg"}
+              alt="double-check-icon"
+              className="w-5 h-5 mr-1 md:w-7 md:h-7 md:mr-2"
+              width={30}
+              height={30}
+            />
+            {offer.title}
+          </div>
+        ))}
       </div>
-      <button className="relative inline-block p-1 my-5 text-2xl text-white rounded-full overflow-hidden focus:outline-none">
+      <button className="relative inline-block p-1 my-5 overflow-hidden text-white rounded-full md:my-10 focus:outline-none">
         <span className="absolute inset-0 bg-gradient-to-r from-[#FCC5E4] via-[#FDA34B] to-[#020F75] rounded-lg"></span>
-        <span className="relative block bg-black px-20 py-5 rounded-full">
+        <Link
+          href={"/"}
+          className="relative block px-16 py-3 text-lg bg-black rounded-full md:px-20 md:py-5 md:text-2xl"
+        >
           Start a Project
-        </span>
+        </Link>
       </button>
     </section>
   );
 }
+
+const offers = [
+  {
+    id: 1,
+    title: "Transparent fees from the start",
+  },
+  {
+    id: 2,
+    title: "Latest technology",
+  },
+  {
+    id: 3,
+    title: "Fast Working Process",
+  },
+];

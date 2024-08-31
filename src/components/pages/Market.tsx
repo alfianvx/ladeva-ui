@@ -6,7 +6,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -16,17 +15,17 @@ import Closing from "../closing";
 export default function Market() {
   return (
     <main className="h-full">
-      <div className="pt-48 pb-10">
-        <h1 className="text-6xl font-bold text-center">
+      <div className="px-5 pt-48 pb-10 md:px-0">
+        <h1 className="text-3xl font-bold text-center md:text-6xl">
           Ladeva
-          <span className="text-ladeva ml-1">Mart.</span>
+          <span className="ml-1 text-ladeva">Mart.</span>
         </h1>
-        <p className="max-w-lg mx-auto py-5 text-center">
+        <p className="max-w-lg py-3 mx-auto text-sm text-center md:text-base md:py-5">
           not only making costum applications. we also make applications for the
           public that you might need.
         </p>
-        <div className="max-w-6xl mx-auto pt-20">
-          <div className="flex justify-end items-center">
+        <div className="max-w-6xl pt-10 mx-auto md:pt-20">
+          <div className="flex items-center justify-end text-sm md:text-base">
             <span className="mr-3">short by :</span>
             <Select>
               <SelectTrigger className="w-[180px]">
@@ -41,23 +40,23 @@ export default function Market() {
               </SelectContent>
             </Select>
           </div>
-          <div className="grid grid-cols-3 gap-3 pt-10 pb-14">
+          <div className="grid grid-cols-1 gap-3 pt-5 md:pt-10 md:grid-cols-3 pb-14">
             {[...products, ...products, ...products].map((product, index) => (
               <div
                 key={index}
                 className="bg-[#F1F5F9] border border-stone-100 overflow-hidden rounded-2xl group hover:cursor-pointer"
               >
-                <div className="w-full h-60 overflow-hidden">
+                <div className="w-full overflow-hidden h-60">
                   <Image
                     src={product.image_url}
                     alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover w-full h-full transition-transform group-hover:scale-105"
                     width={300}
                     height={300}
                   />
                 </div>
                 <div className="p-5">
-                  <h2 className="text-2xl font-bold mb-2">{product.title}</h2>
+                  <h2 className="mb-2 text-2xl font-bold">{product.title}</h2>
                   <p className="text-sm text-pretty">{product.description}</p>
                   <div className="flex items-center gap-2 mt-5">
                     <Button
@@ -70,7 +69,7 @@ export default function Market() {
                     </Button>
                     <Button
                       asChild
-                      className="w-full bg-ladeva text-white hover:bg-ladeva"
+                      className="w-full text-white bg-ladeva hover:bg-ladeva"
                     >
                       <Link href={product.demo_link}>I want this</Link>
                     </Button>
@@ -80,7 +79,7 @@ export default function Market() {
             ))}
           </div>
           <div className="flex justify-center">
-            <button className="py-4 px-14 border-ladeva border rounded-full text-lg text-ladeva">
+            <button className="py-4 text-sm border rounded-full md:text-lg px-14 border-ladeva text-ladeva">
               Load More
             </button>
           </div>

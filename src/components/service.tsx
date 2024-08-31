@@ -45,28 +45,34 @@ const items = [
   },
 ];
 
-export default function Services() {
+export default function Service() {
   return (
-    <section className="flex flex-col items-center justify-center mx-auto mb-20 max-w-7xl">
-      <h1 className="text-4xl font-semibold">
+    <section className="flex flex-col items-center justify-center px-5 mx-auto mb-20 md:px-0 max-w-7xl">
+      <h1 className="text-2xl font-semibold text-center md:text-4xl">
         Great Apps , zero-hassle<span className="text-ladeva">.</span>
       </h1>
-      <span className="max-w-4xl py-5 text-center">
+      <p className="max-w-4xl py-3 text-sm text-center md:py-5">
         When you hire us, you will get the whole team with all of our creative
         power. Not just 1-man-show with couple of outsourced designers like many
         others.
-      </span>
-      <div className="grid grid-cols-3 gap-5">
+      </p>
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {items.map((item) => (
           <div
-            className="px-5 py-3 transition duration-150 ease-in-out border rounded-lg cursor-pointer hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-100/50"
+            className="p-4 transition duration-150 ease-in-out border rounded-lg cursor-pointer md:px-5 md:py-3 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-100/50"
             key={item.id}
           >
-            <div className="flex items-center gap-2 pb-1">
-              <Image src={item.logo} alt="3d-icon" width={70} height={70} />
-              <h1 className="text-base font-medium">{item.title}</h1>
+            <div className="flex items-center gap-2">
+              <Image
+                src={item.logo}
+                className="w-14 md:w-auto"
+                alt="3d-icon"
+                width={70}
+                height={70}
+              />
+              <h1 className="text-sm font-medium md:text-base">{item.title}</h1>
             </div>
-            <p className="text-sm ">{item.description}</p>
+            <p className="text-xs md:text-sm">{item.description}</p>
           </div>
         ))}
       </div>

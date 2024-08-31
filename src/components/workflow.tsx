@@ -1,26 +1,27 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Workflow() {
   return (
-    <section className="flex flex-col items-center justify-center mx-auto my-20 max-w-7xl">
-      <h1 className="text-4xl font-semibold">
+    <section className="flex flex-col items-center justify-center px-5 mx-auto my-14 md:my-20 md:px-0 max-w-7xl">
+      <h1 className="text-2xl font-semibold text-center md:text-4xl">
         How does it work<span className="text-ladeva">.</span>
       </h1>
-      <span className="max-w-4xl py-5 text-center">
+      <span className="max-w-4xl py-3 text-sm text-center md:py-5">
         No overcomplicated workflow, no unnecessary bureaucracy or pappers.
         Let&apos;s go straight to realizing your ideas and tackling your
         business problems.
       </span>
-      <div className="grid w-full grid-cols-4 gap-5">
-        <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-1 p-5 rounded-lg">
-          <h1 className="text-lg font-semibold">
+      <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-4 md:gap-5">
+        <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 md:col-span-1 p-5 rounded-lg">
+          <h1 className="mb-1 text-lg font-semibold">
             1. Get in touch with our team
           </h1>
           <p className="text-sm">
             click on the button to contact our team, and we will respond as soon
             as possible.
           </p>
-          <div className="flex pt-10 justify-center">
+          <div className="flex justify-center pt-10">
             <Image
               src={"/custom/start-project.svg"}
               alt="rocket-icon"
@@ -30,7 +31,9 @@ export default function Workflow() {
           </div>
         </div>
         <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 p-5 rounded-lg">
-          <h1 className="text-lg font-semibold">2. Add your design Apps</h1>
+          <h1 className="mb-1 text-lg font-semibold">
+            2. Add your design Apps
+          </h1>
           <p className="text-sm">
             After you contact our team. we will set to discuss about the
             application that will be made, you will get details of the total
@@ -38,7 +41,7 @@ export default function Workflow() {
             manufacture we will continue to communicate and you can give
             feedback.
           </p>
-          <div className="flex pt-10 justify-center">
+          <div className="flex justify-center pt-10">
             <Image
               src={"/custom/workflow.svg"}
               alt="workflow-icon"
@@ -47,15 +50,18 @@ export default function Workflow() {
             />
           </div>
         </div>
-        <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 p-5 rounded-lg flex relative">
+        <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 p-5 rounded-lg flex flex-col-reverse md:flex-row relative">
           <Image
             src={"/3d/desktop.svg"}
             alt="desktop-icon"
             width={220}
             height={220}
+            className="mx-auto"
           />
           <div>
-            <h1 className="text-lg font-semibold">3. Enjoy your new Apps</h1>
+            <h1 className="mb-1 text-lg font-semibold">
+              3. Enjoy your new Apps
+            </h1>
             <p className="text-sm">
               After you contact our team. we will set to discuss about the
               application that will be made, you will get details of the total
@@ -69,15 +75,16 @@ export default function Workflow() {
             alt="carts-icon"
             width={220}
             height={150}
-            className="absolute -bottom-7 right-0"
+            className="absolute right-0 hidden -bottom-7 md:block"
           />
         </div>
-        <div
+        <Link
+          href={"/"}
           className="bg-gradient-to-r from-[#A18CD1] to-[#FBC2EB] cursor-pointer 
-  rounded-lg col-span-1 flex items-center justify-center"
+  rounded-lg col-span-1 flex items-center justify-center w-auto h-40 md:h-auto"
         >
-          <span className="text-xl text-white font-medium">Any Question?</span>
-        </div>
+          <span className="text-xl font-medium text-white">Any Question?</span>
+        </Link>
       </div>
     </section>
   );

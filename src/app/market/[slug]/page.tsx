@@ -8,19 +8,19 @@ import Link from "next/link";
 export default function Page({ params }: { params: { slug: string } }) {
   return (
     <main className="h-full pt-28">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl px-5 mx-auto md:px-0">
         <Button
           asChild
           variant="secondary"
-          className="py-4 px-10 border-ladeva border rounded-full text-base text-ladeva bg-white hover:bg-ladeva hover:text-white"
+          className="px-10 py-4 text-sm bg-white border rounded-full md:text-base border-ladeva text-ladeva hover:bg-ladeva hover:text-white"
         >
           <Link href={"/market"}>Back to Market</Link>
         </Button>
       </div>
       <section className="mt-5">
-        <div className="bg-[#F1F5F9] py-14">
-          <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl font-semibold mb-3">
+        <div className="bg-[#F1F5F9] py-8 md:py-14">
+          <div className="max-w-5xl px-5 mx-auto md:px-0">
+            <h1 className="mb-3 text-2xl font-semibold md:text-4xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
               officia placeat debitis, culpa sapiente sed?
             </h1>
@@ -31,24 +31,24 @@ export default function Page({ params }: { params: { slug: string } }) {
             </p>
           </div>
         </div>
-        <div className="flex items-center max-w-5xl mx-auto gap-2 my-10">
+        <div className="flex flex-col items-center max-w-5xl gap-2 px-5 py-4 mx-auto md:my-10 md:flex-row md:px-0">
           <Image
             src="/products/garansiindonesia.svg"
             alt="garansi-indonesia"
-            className="w-full h-full object-cover"
+            className="object-cover w-full h-full"
             width={300}
             height={300}
           />
           <Image
             src="/products/garansiindonesia.svg"
             alt="garansi-indonesia"
-            className="w-full h-full object-cover"
+            className="object-cover w-full h-full"
             width={300}
             height={300}
           />
         </div>
-        <div className="max-w-5xl mx-auto">
-          <p>
+        <div className="max-w-5xl px-5 mx-auto my-3 md:px-0">
+          <p className="text-sm md:text-base">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
             dolorum nisi illo pariatur harum. Eius voluptate numquam possimus
             facere optio necessitatibus, omnis reprehenderit. Odio quod non nemo
@@ -62,34 +62,34 @@ export default function Page({ params }: { params: { slug: string } }) {
             alias rem, aliquam totam, tempore voluptatem blanditiis deserunt!
             Reprehenderit voluptatum hic amet.
           </p>
-          <div className="flex items-center justify-center my-12">
+          <div className="flex items-center justify-center my-6 md:my-12">
             <Button
-              className="text-base text-white p-7 bg-ladeva hover:text-black hover:bg-orange-100"
+              className="text-sm text-white md:text-base p-7 bg-ladeva hover:text-black hover:bg-orange-100"
               variant="secondary"
             >
               <IconBrandWhatsapp className="mr-2" />I Want This Now
             </Button>
           </div>
         </div>
-        <div className="max-w-5xl mx-auto">
-          <p className="py-4 font-medium text-base">Simmiliar Application</p>
-          <div className="grid grid-cols-3 gap-3">
+        <div className="max-w-5xl px-5 mx-auto md:px-0">
+          <p className="py-4 text-base font-medium">Simmiliar Application</p>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
             {products.map((product, index) => (
               <div
                 key={index}
                 className="bg-[#F1F5F9] border border-stone-100 overflow-hidden rounded-2xl group hover:cursor-pointer"
               >
-                <div className="w-full h-60 overflow-hidden">
+                <div className="w-full overflow-hidden h-60">
                   <Image
                     src={product.image_url}
                     alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover w-full h-full transition-transform group-hover:scale-105"
                     width={300}
                     height={300}
                   />
                 </div>
                 <div className="p-5">
-                  <h2 className="text-2xl font-bold mb-2">{product.title}</h2>
+                  <h2 className="mb-2 text-2xl font-bold">{product.title}</h2>
                   <p className="text-sm text-pretty">{product.description}</p>
                   <div className="flex items-center gap-2 mt-5">
                     <Button
@@ -102,7 +102,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     </Button>
                     <Button
                       asChild
-                      className="w-full bg-ladeva text-white hover:bg-ladeva"
+                      className="w-full text-white bg-ladeva hover:bg-ladeva"
                     >
                       <Link href={product.demo_link}>I want this</Link>
                     </Button>
