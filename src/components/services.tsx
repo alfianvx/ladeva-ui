@@ -59,7 +59,7 @@ export default function Services() {
       <div className="grid grid-cols-3 gap-5">
         {items.map((item) => (
           <div
-            className="px-5 py-3 transition duration-150 ease-in-out border rounded-lg cursor-pointer hover:border-yellow-400 "
+            className="px-5 py-3 transition duration-150 ease-in-out border rounded-lg cursor-pointer hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-100/50"
             key={item.id}
           >
             <div className="flex items-center gap-2 pb-1">

@@ -12,7 +12,7 @@ export default function Workflow() {
         business problems.
       </span>
       <div className="grid w-full grid-cols-4 gap-5">
-        <div className="bg-[#FFE8E3] col-span-1 p-5 rounded-lg">
+        <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-1 p-5 rounded-lg">
           <h1 className="text-lg font-semibold">
             1. Get in touch with our team
           </h1>
@@ -29,7 +29,7 @@ export default function Workflow() {
             />
           </div>
         </div>
-        <div className="bg-[#F1F5F9] col-span-3 p-5 rounded-lg">
+        <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 p-5 rounded-lg">
           <h1 className="text-lg font-semibold">2. Add your design Apps</h1>
           <p className="text-sm">
             After you contact our team. we will set to discuss about the
@@ -47,7 +47,7 @@ export default function Workflow() {
             />
           </div>
         </div>
-        <div className="bg-[#F1F5F9] col-span-3 p-5 rounded-lg flex relative">
+        <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 p-5 rounded-lg flex relative">
           <Image
             src={"/3d/desktop.svg"}
             alt="desktop-icon"
@@ -73,7 +73,7 @@ export default function Workflow() {
           />
         </div>
         <div
-          className="bg-gradient-to-r from-[#A18CD1] to-[#FBC2EB]
+          className="bg-gradient-to-r from-[#A18CD1] to-[#FBC2EB] cursor-pointer 
   rounded-lg col-span-1 flex items-center justify-center"
         >
           <span className="text-xl text-white font-medium">Any Question?</span>
