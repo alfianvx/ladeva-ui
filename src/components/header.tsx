@@ -4,13 +4,11 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { IconAlignmentRight } from "@irsyadadl/paranoid";
+import { Button } from "./ui/button";
 
 export default function Header() {
   return (
@@ -41,16 +39,20 @@ export default function Header() {
             <div className="absolute w-2 h-2 rounded-full -top-1 -right-2 bg-ladeva"></div>
           </li>
           <li>
-            <Link href={"/"}>How it Work</Link>
+            <Link href={"/#how-it-work"}>How it Work</Link>
           </li>
           <li>
-            <Link href={"/"}>Faq</Link>
+            <Link href={"/#faq"}>Faq</Link>
           </li>
         </ul>
         <div className="justify-end hidden col-span-1 md:flex">
-          <button className="col-span-1 px-8 py-2 border rounded-lg max-w-max">
-            Start a Project
-          </button>
+          <Button
+            variant="outline"
+            className="hover:bg-ladeva hover:text-white"
+            size="lg"
+          >
+            <Link href={"/"}>Start a Project</Link>
+          </Button>
         </div>
         <div className="flex justify-end col-span-1 md:hidden">
           <Sheet>
@@ -91,6 +93,6 @@ const links = [
   { name: "Portofolio", href: "/" },
   { name: "Market", href: "/market" },
   { name: "Why Us", href: "/why-us" },
-  { name: "How it Work", href: "/" },
-  { name: "Faq", href: "/" },
+  { name: "How it Work", href: "/#how-it-work" },
+  { name: "Faq", href: "/#faq" },
 ];
