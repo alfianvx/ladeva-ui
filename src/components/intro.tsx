@@ -28,7 +28,7 @@ export default function Intro() {
         ))}
       </div>
       <Button
-        className="w-full text-white md:max-w-max p-7 bg-ladeva hover:text-stone-900 hover:bg-orange-100"
+        className="w-full text-white transition duration-150 ease-in md:max-w-max p-7 bg-ladeva hover:bg-ladeva hover:shadow-xl"
         variant="secondary"
       >
         <IconBrandWhatsapp className="mr-2" />
