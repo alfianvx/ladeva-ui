@@ -54,8 +54,12 @@ export default function Intro() {
           <span className="mr-1 text-ladeva">1 Slot left.</span>Wanna to talk
           first?
         </p>
-        <Link href={"/"} className="flex items-center text-base">
-          Get in touch <IconArrowRight className="w-5 h-5 ml-2" />
+        <Link
+          href={"/"}
+          className="flex items-center text-base gr group hover:text-ladeva transition duration-150"
+        >
+          Get in touch{" "}
+          <IconArrowRight className="w-5 h-5 ml-[2px] group-hover:translate-x-1 transition duration-150" />
         </Link>
       </div>
     </section>
