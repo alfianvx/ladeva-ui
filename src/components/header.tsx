@@ -21,10 +21,10 @@ export default function Header() {
             <Link href={"/"}>Portofolio</Link>
           </li>
           <li>
-            <Link href={"/"}>Market</Link>
+            <Link href={"/market"}>Market</Link>
           </li>
           <li className="relative">
-            <Link href={"/"}>Why Us</Link>
+            <Link href={"/why-us"}>Why Us</Link>
             <div className="w-2 h-2 -top-1 -right-2 bg-ladeva animate-ping absolute rounded-full"></div>
             <div className="w-2 h-2 -top-1 -right-2 bg-ladeva absolute rounded-full"></div>
           </li>
