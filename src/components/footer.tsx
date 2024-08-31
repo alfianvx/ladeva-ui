@@ -22,7 +22,7 @@ export default function Footer() {
             Copyright 2024 Ladeva Software - All rights Reserved
           </span>
         </div>
-        <div className="flex flex-col-reverse gap-y-4 md:justify-end">
+        <div className="flex flex-col-reverse md:flex-col gap-y-4 md:justify-end">
           <Link
             target="_blank"
             href="https://www.google.com/maps/place/LADEVA+SOFTWARE+HOUSE+-+JASA+PEMBUATAN+WEBSITE+DAN+APLIKASI/@-7.3540271,109.9157807,15z/data=!4m6!3m5!1s0x2e7aa13fc00915d9:0x9a2be6f98b4595cc!8m2!3d-7.3540271!4d109.9157807!16s%2Fg%2F11k3j5ntn9?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"
@@ -30,7 +30,7 @@ export default function Footer() {
           >
             Wonosari , Pagude , Wonosobo, Jawa Tengah, Indonesia (556312)
           </Link>
-          <ul className="flex gap-5 text-sm text-white">
+          <ul className="flex gap-5 text-sm text-white md:justify-end">
             {links.map((link) => (
               <li key={link.id}>{link.logo}</li>
             ))}
