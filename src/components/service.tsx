@@ -59,20 +59,24 @@ export default function Service() {
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {items.map((item) => (
           <div
-            className="p-4 transition duration-150 ease-in-out border rounded-lg cursor-pointer md:px-5 md:py-3 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-100/50"
+            className="p-4 transition-transform duration-300 ease-in-out border rounded-lg cursor-pointer md:px-5 md:py-3 hover:border-yellow-400 hover:shadow-lg hover:transform hover:-translate-y-1"
             key={item.id}
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 transition-transform duration-300 ease-in-out">
               <Image
                 src={item.logo}
-                className="w-14 md:w-auto"
+                className="transition-transform duration-300 ease-in-out w-14 md:w-auto"
                 alt="3d-icon"
                 width={70}
                 height={70}
               />
-              <h1 className="text-sm font-medium md:text-base">{item.title}</h1>
+              <h1 className="text-sm font-medium transition-transform duration-300 ease-in-out md:text-base">
+                {item.title}
+              </h1>
             </div>
-            <p className="text-xs md:text-sm">{item.description}</p>
+            <p className="text-xs transition-transform duration-300 ease-in-out md:text-sm">
+              {item.description}
+            </p>
           </div>
         ))}
       </div>
