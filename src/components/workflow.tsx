@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Workflow() {
   return (
-    <section id="how-it-work" className="px-5 md:px-0 scroll-m-32">
+    <section id="how-it-work" className="px-5 scroll-m-32">
       <div className="flex flex-col items-center justify-center mx-auto my-14 md:my-20  max-w-7xl scroll-m-32">
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-center md:text-4xl">
