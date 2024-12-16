@@ -1,33 +1,20 @@
-import Image from "next/image";
+import { getProducts } from "@/service/Product";
 import { InfiniteMovingCards } from "./infininite-moving-cards";
 import PartnerList from "./template/partner-list";
+import { getPortofolios } from "@/service/Portofolio";
 
-const images = [
-  {
-    id: 1,
-    src: "/products/academy-mastership.svg",
-  },
-  {
-    id: 2,
-    src: "/products/garansiindonesia.svg",
-  },
-  {
-    id: 3,
-    src: "/products/strongneurology.svg",
-  },
-];
-
-export default function Projects() {
+export default async function Projects() {
+  const portofolios = await getPortofolios();
   return (
     <section className="overflow-hidden py-7 md:py-10">
       <InfiniteMovingCards
-        items={images}
+        items={portofolios.data}
         direction="left"
         speed="fast"
         pauseOnHover={false}
       />
       <InfiniteMovingCards
-        items={images}
+        items={portofolios.data}
         direction="right"
         speed="slow"
         pauseOnHover={false}

@@ -10,10 +10,7 @@ export const InfiniteMovingCards = ({
   pauseOnHover = true,
   className,
 }: {
-  items: {
-    id: number;
-    src: string;
-  }[];
+  items: TPortofolio[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -85,11 +82,13 @@ export const InfiniteMovingCards = ({
         {items.map((item) => (
           <li key={item.id} className="cursor-pointer">
             <Image
-              src={item.src}
+              src={item.thumbnail_url}
               alt="product-image"
               className=""
               width={400}
               height={400}
+              priority
+              quality={100}
             />
           </li>
         ))}
