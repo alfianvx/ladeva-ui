@@ -1,10 +1,5 @@
 import Image from "next/image";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import FaqList from "./template/faq-list";
 
 export default function Faq() {
   return (
@@ -26,55 +21,9 @@ export default function Faq() {
             width={300}
             height={300}
           />
-          <Accordion
-            type="single"
-            className="md:basis-2/4 basis-full"
-            collapsible
-          >
-            {faqs.map((faq) => (
-              <AccordionItem key={faq.id} value={`item-${faq.id}`}>
-                <AccordionTrigger className="text-sm md:text-base font-semibold">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <FaqList />
         </div>
       </div>
     </section>
   );
 }
-
-const faqs = [
-  {
-    id: 1,
-    question: "How to contact customer service?",
-    answer:
-      "You can contact our customer service via the chat feature on the website or via email at",
-  },
-  {
-    id: 2,
-    question: "How to return a product?",
-    answer:
-      "You can return the product by contacting our customer service and stating the reason for the return.",
-  },
-  {
-    id: 3,
-    question: "How to track the product?",
-    answer:
-      "You can track the product by entering the tracking number that we have provided to you.",
-  },
-  {
-    id: 4,
-    question: "How to cancel an order?",
-    answer:
-      "You can cancel an order by contacting our customer service and stating the reason for the cancellation.",
-  },
-  {
-    id: 5,
-    question: "How to change the shipping address?",
-    answer:
-      "You can change the shipping address by contacting our customer service and stating the new shipping address.",
-  },
-];
