@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ServiceList from "./template/service-list";
 
 const items = [
   {
@@ -59,30 +60,7 @@ export default function Service() {
             designers like many others.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          {items.map((item) => (
-            <div
-              className="p-4 transition-transform duration-300 ease-in-out border rounded-lg cursor-pointer md:px-5 md:py-3 hover:border-yellow-400 hover:shadow-lg hover:transform hover:-translate-y-1"
-              key={item.id}
-            >
-              <div className="flex items-center gap-2 transition-transform duration-300 ease-in-out">
-                <Image
-                  src={item.logo}
-                  className="transition-transform duration-300 ease-in-out w-14 md:w-auto"
-                  alt="3d-icon"
-                  width={70}
-                  height={70}
-                />
-                <h1 className="text-sm font-bold transition-transform duration-300 ease-in-out md:text-base">
-                  {item.title}
-                </h1>
-              </div>
-              <p className="text-xs transition-transform tracking-wide duration-300 ease-in-out md:text-sm">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
+        <ServiceList />
       </div>
     </section>
   );
