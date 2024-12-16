@@ -20,18 +20,19 @@ export const metadata: Metadata = {
     "Affordable Software",
     "Indonesia Digital Economy",
     "Ladeva",
+    "Ladeva Software House",
   ],
   authors: [
     {
       name: "Ladeva Software House",
-      url: "https://www.ladeva.com",
+      url: "https://www.ladeva-ui.vercel.app",
     },
   ],
   openGraph: {
     title: "Ladeva Software House - Affordable Digital Solutions",
     description:
       "Ladeva Software House offers top-notch digital solutions at affordable prices, driving Indonesia's digital economy forward.",
-    url: "https://www.ladeva.com",
+    url: "https://www.ladeva-ui.vercel.app",
     type: "website",
     images: [
       {
