@@ -50,9 +50,19 @@ const brands = [
 export default function Projects() {
   return (
     <section className="overflow-hidden py-7 md:py-10">
-      <InfiniteMovingCards items={images} direction="left" speed="fast" />
-      <InfiniteMovingCards items={images} direction="right" speed="slow" />
-      <div className="flex flex-wrap items-center justify-center max-w-5xl gap-3 px-5 py-10 mx-auto md:gap-9 md:py-16 md:px-0">
+      <InfiniteMovingCards
+        items={images}
+        direction="left"
+        speed="fast"
+        pauseOnHover={false}
+      />
+      <InfiniteMovingCards
+        items={images}
+        direction="right"
+        speed="slow"
+        pauseOnHover={false}
+      />
+      <div className="flex flex-wrap items-center justify-center max-w-5xl gap-3 px-5 py-14 mx-auto md:gap-9 md:py-24 md:px-0">
         {brands.map((brand) => (
           <Image
             key={brand.id}

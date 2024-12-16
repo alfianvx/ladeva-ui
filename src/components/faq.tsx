@@ -10,10 +10,10 @@ export default function Faq() {
   return (
     <section id="faq" className="bg-[#F1F5F9] scroll-m-20">
       <div className="flex flex-col px-5 py-10 mx-auto md:pt-16 max-w-7xl md:px-0">
-        <h1 className="text-2xl font-semibold md:text-4xl">
+        <h1 className="text-2xl font-bold md:text-4xl">
           What. The. F.A.Q<span className="text-ladeva">.</span>
         </h1>
-        <p className="max-w-xl py-3 text-sm md:py-5 ">
+        <p className="max-w-xl tracking-wide leading-6 py-3 text-sm md:py-5 ">
           Some questions that are often asked by old and new clients. if there
           is something unclear please contact us, don&apos;t hesitate.{" "}
           <span className="text-ladeva">ladeva@hay.com</span>
@@ -33,7 +33,7 @@ export default function Faq() {
           >
             {faqs.map((faq) => (
               <AccordionItem key={faq.id} value={`item-${faq.id}`}>
-                <AccordionTrigger className="text-sm md:text-base">
+                <AccordionTrigger className="text-sm md:text-base font-semibold">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent>{faq.answer}</AccordionContent>

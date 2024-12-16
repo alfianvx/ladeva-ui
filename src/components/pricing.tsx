@@ -5,15 +5,15 @@ import { Button } from "./ui/button";
 export default function Pricing() {
   return (
     <section className="flex flex-col items-center justify-center px-5 mx-auto my-16 md:my-20 md:px-0 max-w-7xl">
-      <h1 className="text-2xl font-semibold text-center md:text-4xl">
+      <h1 className="text-2xl font-bold text-center md:text-4xl">
         Simple pricing<span className="text-ladeva">.</span>
       </h1>
-      <span className="max-w-4xl py-3 text-sm text-center md:py-5">
+      <p className="max-w-4xl py-3 tracking-wide leading-6 text-sm text-center mx-auto md:py-5">
         we will offer a price and if it is suitable we will start the work.
-      </span>
+      </p>
       <div className="grid w-full max-w-5xl grid-cols-5 gap-3 mt-5 md:mt-8">
         <div className="bg-[#F1F5F9] p-5 rounded-2xl col-span-5 md:col-span-2">
-          <h1 className="mb-2 text-3xl font-semibold">
+          <h1 className="mb-2 text-3xl font-bold">
             Free <span className="text-stone-400">Consul</span>
           </h1>
           <p className="text-sm">Don&apos;t hesitate, contant us</p>
@@ -39,9 +39,7 @@ export default function Pricing() {
           </Button>
         </div>
         <div className="bg-[#ED6244] text-white p-5 rounded-2xl col-span-5 md:col-span-3">
-          <h1 className="mb-2 text-2xl font-semibold">
-            2X payment installment
-          </h1>
+          <h1 className="mb-2 text-2xl font-bold">2X payment installment</h1>
           <p className="text-sm">Cost can be custumized</p>
           <ul className="grid grid-cols-1 gap-3 my-6 md:my-8 md:grid-cols-2 md:grid-rows-3">
             {packages.installment.features.map((feature, index) => (

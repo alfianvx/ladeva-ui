@@ -32,7 +32,9 @@ export default function Footer() {
           </Link>
           <ul className="flex gap-5 text-sm text-white md:justify-end">
             {links.map((link) => (
-              <li key={link.id}>{link.logo}</li>
+              <li key={link.id} className="cursor-pointer">
+                <Link href={link.url}>{link.logo}</Link>
+              </li>
             ))}
           </ul>
         </div>

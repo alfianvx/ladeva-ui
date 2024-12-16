@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Closing() {
   return (
-    <section className="flex flex-col items-center justify-center w-full px-5 py-10 mx-auto bg-black md:py-20 md:px-0">
-      <h1 className="max-w-4xl py-5 text-3xl font-bold text-center text-white md:text-5xl">
+    <section className="flex flex-col items-center justify-center w-full px-5 py-10 mx-auto bg-black md:py-24 md:px-0">
+      <h1 className="max-w-4xl leading-6 py-5 text-3xl font-extrabold text-center text-white md:text-5xl">
         Digitalize your business with us just one click away
         <span className="text-ladeva">.</span>
       </h1>
@@ -25,7 +25,7 @@ export default function Closing() {
           </div>
         ))}
       </div>
-      <button className="relative inline-block p-1 my-5 overflow-hidden text-white rounded-full md:my-10 focus:outline-none">
+      <button className="relative inline-block p-1 mt-5 overflow-hidden text-white rounded-full md:mt-10 focus:outline-none">
         <span className="absolute inset-0 bg-gradient-to-r from-[#FCC5E4] via-[#FDA34B] to-[#020F75] rounded-lg"></span>
         <Link
           href={"/"}

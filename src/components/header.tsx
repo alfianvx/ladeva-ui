@@ -10,9 +10,18 @@ import {
 import { IconAlignmentRight } from "@irsyadadl/paranoid";
 import { Button } from "./ui/button";
 
+const links = [
+  { name: "Home", href: "/" },
+  { name: "Portofolio", href: "/" },
+  { name: "Market", href: "/market" },
+  { name: "Why Us", href: "/why-us" },
+  { name: "How it Work", href: "/#how-it-work" },
+  { name: "Faq", href: "/#faq" },
+];
+
 export default function Header() {
   return (
-    <header className="fixed z-50 w-full bg-white border-b">
+    <header className="fixed z-50 w-full top-0 border-b border-stone-300/30 bg-white">
       <nav className="grid items-center grid-cols-2 px-4 py-5 mx-auto max-w-7xl md:grid-cols-4">
         <Link href={"/"} className="col-span-1">
           <Image
@@ -25,30 +34,60 @@ export default function Header() {
         </Link>
         <ul className="items-center justify-between hidden w-full col-span-2 md:flex">
           <li>
-            <Link href={"/"}>Home</Link>
+            <Link
+              href={"/"}
+              className="hover:text-ladeva transition duration-150 ease-in-out"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link href={"/"}>Portofolio</Link>
+            <Link
+              href={"/"}
+              className="hover:text-ladeva transition duration-150 ease-in-out"
+            >
+              Portofolio
+            </Link>
           </li>
           <li>
-            <Link href={"/market"}>Market</Link>
+            <Link
+              href={"/market"}
+              className="hover:text-ladeva transition duration-150 ease-in-out"
+            >
+              Market
+            </Link>
           </li>
           <li className="relative">
-            <Link href={"/why-us"}>Why Us</Link>
+            <Link
+              href={"/why-us"}
+              className="hover:text-ladeva transition duration-150 ease-in-out"
+            >
+              Why Us
+            </Link>
             <div className="absolute w-2 h-2 rounded-full -top-1 -right-2 bg-ladeva animate-ping"></div>
             <div className="absolute w-2 h-2 rounded-full -top-1 -right-2 bg-ladeva"></div>
           </li>
           <li>
-            <Link href={"/#how-it-work"}>How it Work</Link>
+            <Link
+              href={"/#how-it-work"}
+              className="hover:text-ladeva transition duration-150 ease-in-out"
+            >
+              How it Work
+            </Link>
           </li>
           <li>
-            <Link href={"/#faq"}>Faq</Link>
+            <Link
+              href={"/#faq"}
+              className="hover:text-ladeva transition duration-150 ease-in-out"
+            >
+              Faq
+            </Link>
           </li>
         </ul>
         <div className="justify-end hidden col-span-1 md:flex">
           <Button
             variant="outline"
-            className="hover:bg-ladeva hover:text-white"
+            className="hover:bg-ladeva hover:text-white shadow-none"
             size="lg"
           >
             <Link href={"/"}>Start a Project</Link>
@@ -87,12 +126,3 @@ export default function Header() {
     </header>
   );
 }
-
-const links = [
-  { name: "Home", href: "/" },
-  { name: "Portofolio", href: "/" },
-  { name: "Market", href: "/market" },
-  { name: "Why Us", href: "/why-us" },
-  { name: "How it Work", href: "/#how-it-work" },
-  { name: "Faq", href: "/#faq" },
-];
