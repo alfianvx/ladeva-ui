@@ -11,7 +11,46 @@ const fontSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ladeva Software House",
+  title: "Ladeva Software House - Affordable Digital Solutions",
+  description:
+    "Ladeva Software House offers top-notch digital solutions at affordable prices, driving Indonesia's digital economy forward.",
+  keywords: [
+    "Software House",
+    "Digital Solutions",
+    "Affordable Software",
+    "Indonesia Digital Economy",
+    "Ladeva",
+  ],
+  authors: [
+    {
+      name: "Ladeva Software House",
+      url: "https://www.ladeva.com",
+    },
+  ],
+  openGraph: {
+    title: "Ladeva Software House - Affordable Digital Solutions",
+    description:
+      "Ladeva Software House offers top-notch digital solutions at affordable prices, driving Indonesia's digital economy forward.",
+    url: "https://www.ladeva.com",
+    type: "website",
+    images: [
+      {
+        url: "https://utfs.io/f/YdQML4nhRlwkciu9a0mw2vOl51SWnoepA8RxtfuasYjrd63K",
+        width: 1738,
+        height: 974,
+        alt: "Ladeva Software House",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@ladeva",
+    title: "Ladeva Software House - Affordable Digital Solutions",
+    description:
+      "Ladeva Software House offers top-notch digital solutions at affordable prices, driving Indonesia's digital economy forward.",
+    images:
+      "https://utfs.io/f/YdQML4nhRlwkciu9a0mw2vOl51SWnoepA8RxtfuasYjrd63K",
+  },
 };
 
 export default function RootLayout({
