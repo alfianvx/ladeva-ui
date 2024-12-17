@@ -3,8 +3,8 @@ import FaqList from "./template/faq-list";
 
 export default function Faq() {
   return (
-    <section id="faq" className="bg-[#F1F5F9] scroll-m-20">
-      <div className="flex flex-col px-5 py-10 mx-auto md:pt-16 max-w-7xl md:px-0">
+    <section id="faq" className="bg-[#F1F5F9] scroll-m-20 px-5">
+      <div className="flex flex-col py-10 mx-auto md:pt-16 max-w-7xl md:px-0">
         <h1 className="text-2xl font-bold md:text-4xl">
           What. The. F.A.Q<span className="text-ladeva">.</span>
         </h1>

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default async function PartnerList() {
   const partners = await getPartners();
   return (
-    <div className="flex flex-wrap items-center justify-center max-w-5xl gap-3 px-5 py-14 mx-auto md:gap-9 md:py-24 md:px-0">
+    <div className="flex flex-wrap items-center justify-center max-w-5xl gap-14 px-5 py-14 mx-auto md:gap-9 md:py-24 md:px-0">
       {partners.data.map((partner) => (
         <Image
           key={partner.id}

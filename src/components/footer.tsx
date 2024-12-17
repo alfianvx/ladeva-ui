@@ -9,8 +9,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="px-5 py-8 bg-black border-t border-white/20 md:py-5 md:px-0">
-      <div className="flex flex-col-reverse items-center justify-center mx-auto gap-y-4 md:flex-row md:justify-between max-w-7xl">
+    <footer className="px-5 py-8 bg-black border-t border-white/20 md:py-5">
+      <div className="flex flex-col-reverse items-center justify-center mx-auto gap-y-7 md:flex-row md:justify-between max-w-7xl">
         <div className="flex flex-col gap-y-2">
           <Image
             src={"/logo/ladeva-full-logo-light.svg"}

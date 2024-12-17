@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import ProductList from "./template/product-list";
 
 export default function Product() {
   return (
@@ -19,41 +19,7 @@ export default function Product() {
           Learn More
         </Link>
       </button>
-      <div className="flex flex-wrap items-center justify-center max-w-5xl py-5 mx-auto gap-7 md:gap-9 md:py-16">
-        {products.map((brand) => (
-          <Image
-            key={brand.id}
-            src={brand.src}
-            alt="brand-logo"
-            width={250}
-            height={100}
-            className="mx-auto md:w-[15%] w-[30%]"
-          />
-        ))}
-      </div>
+      <ProductList />
     </section>
   );
 }
-
-const products = [
-  {
-    id: 1,
-    src: "/products/smart-jimpitan.svg",
-  },
-  {
-    id: 2,
-    src: "/products/digilab.svg",
-  },
-  {
-    id: 3,
-    src: "/products/digirim.svg",
-  },
-  {
-    id: 4,
-    src: "/products/sewa-toko.svg",
-  },
-  {
-    id: 5,
-    src: "/products/web-sekolah.svg",
-  },
-];

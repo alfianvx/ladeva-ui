@@ -14,7 +14,7 @@ export default async function FaqList() {
     <Accordion type="single" className="md:basis-2/4 basis-full" collapsible>
       {faqs.data.map((faq) => (
         <AccordionItem key={faq.id} value={`item-${faq.id}`}>
-          <AccordionTrigger className="text-sm md:text-base font-semibold">
+          <AccordionTrigger className="text-sm md:text-base text-left font-semibold">
             {faq.question}
           </AccordionTrigger>
           <AccordionContent>{faq.answer}</AccordionContent>
