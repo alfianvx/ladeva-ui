@@ -2,7 +2,7 @@ import Closing from "@/components/closing";
 import Differentiator from "@/components/differentiator";
 import Faq from "@/components/faq";
 import Intro from "@/components/intro";
-import Market from "@/components/market";
+import MarketScope from "@/components/market";
 import Pricing from "@/components/pricing";
 import Product from "@/components/product";
 import Projects from "@/components/projects";
@@ -19,7 +19,7 @@ export default function Home() {
       <Differentiator />
       <Workflow />
       <Reviews />
-      <Market />
+      <MarketScope />
       <Pricing />
       <Product />
       <Faq />
