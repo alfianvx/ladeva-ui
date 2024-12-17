@@ -12,5 +12,12 @@ type TProductResponse = {
   status: boolean;
   statusCode: number;
   message: string;
+  data: TProduct;
+};
+
+type TProductsResponse = {
+  status: boolean;
+  statusCode: number;
+  message: string;
   data: TProduct[];
 };

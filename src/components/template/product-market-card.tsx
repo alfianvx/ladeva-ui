@@ -1,0 +1,37 @@
+import Image from "next/image";
+import { Button } from "../ui/button";
+import Link from "next/link";
+
+export default function ProductMarketCard({ data }: { data: TProduct }) {
+  return (
+    <div className="bg-[#F1F5F9] border border-stone-100 overflow-hidden rounded-2xl group hover:cursor-pointer">
+      <div className="w-full overflow-hidden h-60">
+        <Image
+          src={data.thumbnail_url}
+          alt={data.name}
+          className="object-contain w-full h-full transition-transform group-hover:scale-105"
+          width={300}
+          height={300}
+        />
+      </div>
+      <div className="p-5">
+        <h2 className="mb-2 text-2xl font-bold">{data.name}</h2>
+        <p className="text-sm text-pretty">{data.short_description}</p>
+        <div className="flex items-center gap-2 mt-5">
+          <Button
+            asChild
+            className="w-full bg-[#FFE8E3] hover:bg-[#FFE8E3] text-ladeva shadow-none"
+          >
+            <Link href={`/market/product/${data.slug}`}>Demo</Link>
+          </Button>
+          <Button
+            asChild
+            className="w-full text-white bg-ladeva hover:bg-ladeva shadow-none"
+          >
+            <Link href="#">I want this</Link>
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}

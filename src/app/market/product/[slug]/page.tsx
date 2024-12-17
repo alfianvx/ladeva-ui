@@ -1,76 +1,27 @@
 import Closing from "@/components/closing";
 import Faq from "@/components/faq";
+import MarketDetail from "@/components/pages/market-detail";
 import { Button } from "@/components/ui/button";
-import { IconBrandWhatsapp } from "@irsyadadl/paranoid";
+import { getProductBySlug } from "@/service/Product";
+import { IconChevronLeft } from "@irsyadadl/paranoid";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
+  const product = await getProductBySlug(params.slug);
   return (
-    <main className="h-full pt-28">
-      <div className="max-w-5xl px-5 mx-auto md:px-0">
-        <Button
-          asChild
-          variant="secondary"
-          className="px-10 py-4 text-sm bg-white border rounded-full md:text-base border-ladeva text-ladeva hover:bg-ladeva hover:text-white"
-        >
-          <Link href={"/market"}>Back to Market</Link>
-        </Button>
-      </div>
-      <section className="mt-5">
-        <div className="bg-[#F1F5F9] py-8 md:py-14">
-          <div className="max-w-5xl px-5 mx-auto md:px-0">
-            <h1 className="mb-3 text-2xl font-semibold md:text-4xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              officia placeat debitis, culpa sapiente sed?
-            </h1>
-            <p className="text-sm">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
-              autem nisi blanditiis culpa obcaecati nihil amet ratione sunt
-              praesentium quia.
-            </p>
-          </div>
+    <main className="h-full pt-24">
+      <section>
+        <div className="max-w-5xl mb-5 px-5 mx-auto md:px-0">
+          <Button
+            asChild
+            variant="secondary"
+            className="px-10 py-4 text-sm bg-white border rounded-full md:text-base border-ladeva text-ladeva hover:bg-ladeva hover:text-white"
+          >
+            <Link href={"/market"}>Back to Market</Link>
+          </Button>
         </div>
-        <div className="flex flex-col items-center max-w-5xl gap-2 px-5 py-4 mx-auto md:my-10 md:flex-row md:px-0">
-          <Image
-            src="/products/garansiindonesia.svg"
-            alt="garansi-indonesia"
-            className="object-cover w-full h-full"
-            width={300}
-            height={300}
-          />
-          <Image
-            src="/products/garansiindonesia.svg"
-            alt="garansi-indonesia"
-            className="object-cover w-full h-full"
-            width={300}
-            height={300}
-          />
-        </div>
-        <div className="max-w-5xl px-5 mx-auto my-3 md:px-0">
-          <p className="text-sm md:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
-            dolorum nisi illo pariatur harum. Eius voluptate numquam possimus
-            facere optio necessitatibus, omnis reprehenderit. Odio quod non nemo
-            doloremque totam fugit ea eligendi odit soluta dolorem? Unde ut esse
-            iste modi ipsa quod fuga ducimus repellendus officia aut minima
-            voluptate, tempore quidem sunt nihil assumenda non obcaecati
-            voluptates neque expedita eum veniam dolores. Consequuntur odio
-            alias quis quasi molestias, cum deserunt maxime harum obcaecati
-            laboriosam dignissimos. Repellendus necessitatibus nihil itaque
-            minima obcaecati optio ab, beatae natus exercitationem labore sunt
-            alias rem, aliquam totam, tempore voluptatem blanditiis deserunt!
-            Reprehenderit voluptatum hic amet.
-          </p>
-          <div className="flex items-center justify-center my-6 md:my-12">
-            <Button
-              className="text-sm text-white md:text-base p-7 bg-ladeva hover:text-black hover:bg-orange-100"
-              variant="secondary"
-            >
-              <IconBrandWhatsapp className="mr-2" />I Want This Now
-            </Button>
-          </div>
-        </div>
+        <MarketDetail data={product.data} />
         <div className="max-w-5xl px-5 mx-auto md:px-0">
           <p className="py-4 text-base font-medium">Simmiliar Application</p>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
