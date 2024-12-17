@@ -2,7 +2,7 @@ import Closing from "@/components/closing";
 import Differentiator from "@/components/differentiator";
 import Faq from "@/components/faq";
 import Intro from "@/components/intro";
-import MarketScope from "@/components/market";
+import MarketScope from "@/components/market-scope";
 import Pricing from "@/components/pricing";
 import Product from "@/components/product";
 import Projects from "@/components/projects";

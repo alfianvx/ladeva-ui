@@ -15,7 +15,7 @@ export default function Product() {
         className="py-4 rounded-full px-8 md:px-10 bg-gradient-to-r from-[#A18CD1] to-[#FBC2EB] text-white
  border my-5 md:my-10"
       >
-        <Link href={"/markets"} className="block text-sm md:text-base">
+        <Link href={"/market"} className="block text-sm md:text-base">
           Learn More
         </Link>
       </button>
