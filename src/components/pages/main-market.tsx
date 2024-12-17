@@ -10,7 +10,7 @@ import Faq from "../faq";
 import Closing from "../closing";
 import ProductMarketList from "../template/product-market-list";
 
-export default function Market() {
+export default function MainMarket() {
   return (
     <main className="h-full">
       <div className="pt-48 pb-10 px-5">
