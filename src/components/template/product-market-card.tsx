@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { WhatsAppNumber } from "@/lib/whatsapp-number";
 
 export default function ProductMarketCard({ data }: { data: TProduct }) {
   return (
@@ -28,7 +29,12 @@ export default function ProductMarketCard({ data }: { data: TProduct }) {
             asChild
             className="w-full text-white bg-ladeva hover:bg-ladeva shadow-none"
           >
-            <Link href="#">I want this</Link>
+            <Link
+              target="_blank"
+              href={`https://wa.me/${WhatsAppNumber}?text=Halo%20saya%20tertarik%20dengan%20aplikasi%20${data.name}.%20Bisa%20dibantu%3F`}
+            >
+              I want this
+            </Link>
           </Button>
         </div>
       </div>

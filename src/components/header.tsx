@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sheet";
 import { IconAlignmentRight } from "@irsyadadl/paranoid";
 import { Button } from "./ui/button";
+import { WhatsAppNumber } from "@/lib/whatsapp-number";
 
 const links = [
   { name: "Home", href: "/" },
@@ -89,8 +90,14 @@ export default function Header() {
             variant="outline"
             className="hover:bg-ladeva hover:text-white shadow-none"
             size="lg"
+            asChild
           >
-            <Link href={"/"}>Start a Project</Link>
+            <Link
+              target="_blank"
+              href={`https://wa.me/${WhatsAppNumber}?text=Halo%20saya%20tertarik%20memesan%20aplikasi.%20Bisa%20dibantu%3F`}
+            >
+              Start a Project
+            </Link>
           </Button>
         </div>
         <div className="flex justify-end col-span-1 md:hidden">

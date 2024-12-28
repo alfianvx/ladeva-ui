@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { getPricings } from "@/service/Pricing";
+import { WhatsAppNumber } from "@/lib/whatsapp-number";
 
 export default async function Pricing() {
   const pricings = await getPricings();
@@ -49,7 +50,12 @@ export default async function Pricing() {
                 asChild
                 variant="outline"
               >
-                <Link href={"/"}>Try Us</Link>
+                <Link
+                  target="_blank"
+                  href={`https://wa.me/${WhatsAppNumber}?text=Halo%2C%20saya%20tertarik%20dengan%20Paket%20Standar.%20Bisa%20berikan%20informasi%20lebih%20lanjut%3F`}
+                >
+                  Try Us
+                </Link>
               </Button>
             </div>
           ))}
@@ -81,7 +87,12 @@ export default async function Pricing() {
               asChild
               variant="secondary"
             >
-              <Link href={"/"}>Create my Application</Link>
+              <Link
+                target="_blank"
+                href={`https://wa.me/${WhatsAppNumber}?text=Halo%2C%20saya%20tertarik%20dengan%20Paket%20Premium.%20Bisa%20berikan%20informasi%20lebih%20lanjut%3F`}
+              >
+                Create my Application
+              </Link>
             </Button>
           </div>
         ))}

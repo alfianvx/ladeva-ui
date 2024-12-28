@@ -2,6 +2,7 @@ import Closing from "@/components/closing";
 import Faq from "@/components/faq";
 import MarketDetail from "@/components/pages/market-detail";
 import { Button } from "@/components/ui/button";
+import { WhatsAppNumber } from "@/lib/whatsapp-number";
 import { getProductBySlug } from "@/service/Product";
 import { IconChevronLeft } from "@irsyadadl/paranoid";
 import Image from "next/image";
@@ -22,7 +23,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </Button>
         </div>
         <MarketDetail data={product.data} />
-        <div className="max-w-5xl px-5 mx-auto md:px-0">
+        <div className="max-w-5xl my-5 px-5 mx-auto md:px-0">
           <p className="py-4 text-base font-medium">Simmiliar Application</p>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
             {products.map((product, index) => (
@@ -55,7 +56,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
                       asChild
                       className="w-full text-white bg-ladeva hover:bg-ladeva"
                     >
-                      <Link href={product.demo_link}>I want this</Link>
+                      <Link
+                        target="_blank"
+                        href={`https://wa.me/${WhatsAppNumber}?text=Halo%20saya%20tertarik%20dengan%20aplikasi%20${product.title}.%20Bisa%20dibantu%3F`}
+                      >
+                        I want this
+                      </Link>
                     </Button>
                   </div>
                 </div>

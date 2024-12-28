@@ -1,3 +1,4 @@
+import { WhatsAppNumber } from "@/lib/whatsapp-number";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,7 +29,8 @@ export default function Closing() {
       <button className="relative inline-block p-1 mt-5 overflow-hidden text-white rounded-full md:mt-10 focus:outline-none">
         <span className="absolute inset-0 bg-gradient-to-r from-[#FCC5E4] via-[#FDA34B] to-[#020F75] rounded-lg"></span>
         <Link
-          href={"/"}
+          target="_blank"
+          href={`https://wa.me/${WhatsAppNumber}?text=Halo%20saya%20tertarik%20memesan%20aplikasi.%20Bisa%20dibantu%3F`}
           className="relative block px-16 py-3 text-lg bg-black rounded-full md:px-20 md:py-5 md:text-2xl"
         >
           Start a Project

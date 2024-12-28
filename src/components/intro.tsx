@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { IconArrowRight, IconBrandWhatsapp } from "@irsyadadl/paranoid";
 import Link from "next/link";
+import { WhatsAppNumber } from "@/lib/whatsapp-number";
 
 export default function Intro() {
   return (
@@ -31,9 +32,15 @@ export default function Intro() {
         <Button
           className="w-full text-white transition duration-150 ease-in md:max-w-max p-7 bg-ladeva hover:bg-ladeva hover:shadow-xl"
           variant="secondary"
+          asChild
         >
-          <IconBrandWhatsapp className="mr-2" />
-          Start your dream project
+          <Link
+            target="_blank"
+            href={`https://wa.me/${WhatsAppNumber}?text=Halo%20saya%20tertarik%20memesan%20aplikasi.%20Bisa%20dibantu%3F`}
+          >
+            <IconBrandWhatsapp className="mr-2" />
+            Start your dream project
+          </Link>
         </Button>
         <div className="flex py-8 space-x-1">
           <p className="text-sm md:text-base">
@@ -41,7 +48,8 @@ export default function Intro() {
             first?
           </p>
           <Link
-            href={"/"}
+            target="_blank"
+            href={`https://wa.me/${WhatsAppNumber}?text=Halo%20saya%20tertarik%20memesan%20aplikasi.%20Bisa%20dibantu%3F`}
             className="flex items-center text-sm transition duration-150 md:text-base group hover:text-ladeva"
           >
             Get in touch{" "}

@@ -47,21 +47,21 @@ const links = [
   {
     id: 1,
     logo: <IconBrandInstagram />,
-    url: "/",
+    url: "https://www.ladeva-ui.vercel.app/",
   },
   {
     id: 2,
     logo: <IconBrandFacebook />,
-    url: "/",
+    url: "https://www.ladeva-ui.vercel.app/",
   },
   {
     id: 3,
     logo: <IconBrandLinkedin />,
-    url: "/",
+    url: "https://www.ladeva-ui.vercel.app/",
   },
   {
     id: 4,
     logo: <IconBrandYoutube />,
-    url: "/",
+    url: "https://www.ladeva-ui.vercel.app/",
   },
 ];

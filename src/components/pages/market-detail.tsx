@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { IconBrandWhatsapp } from "@irsyadadl/paranoid";
+import Link from "next/link";
+import { WhatsAppNumber } from "@/lib/whatsapp-number";
 
 export default function MarketDetail({ data }: { data: TProduct }) {
   return (
@@ -31,8 +33,14 @@ export default function MarketDetail({ data }: { data: TProduct }) {
           <Button
             className="text-sm text-white md:text-md px-7 py-6 bg-ladeva hover:text-black hover:bg-orange-100"
             variant="secondary"
+            asChild
           >
-            <IconBrandWhatsapp className="mr-2" />I Want This Now
+            <Link
+              target="_blank"
+              href={`https://wa.me/${WhatsAppNumber}?text=Halo%20saya%20tertarik%20dengan%20aplikasi%20${data.name}.%20Bisa%20dibantu%3F`}
+            >
+              <IconBrandWhatsapp className="mr-2" />I Want This Now
+            </Link>
           </Button>
         </div>
       </div>
