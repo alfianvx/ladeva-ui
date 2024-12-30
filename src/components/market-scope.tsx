@@ -15,6 +15,8 @@ export default function MarketScope() {
         src={"/custom/maps.svg"}
         className="w-full"
         alt="maps-svg"
+        priority
+        quality={100}
         width={1024}
         height={1024}
       />
