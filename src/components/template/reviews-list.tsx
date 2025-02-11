@@ -1,11 +1,11 @@
-"use client";
-
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { getTestimonials } from "@/service/Testimonial";
 
-export default function ReviewsList({ data }: { data: TTestimonial[] }) {
-  const highlightedReviews = data.filter(
+export default async function ReviewsList() {
+  const reviews = await getTestimonials();
+  const highlightedReviews = reviews.data.filter(
     (review) => review.is_featured === true
   );
 
@@ -47,7 +47,7 @@ export default function ReviewsList({ data }: { data: TTestimonial[] }) {
         </div>
       ))}
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-5">
-        {data
+        {reviews.data
           .filter((review) => review.is_featured === false)
           .map((review) => (
             <div key={review.id} className="w-full p-5 border rounded-lg">

@@ -9,10 +9,8 @@ import Projects from "@/components/projects";
 import Reviews from "@/components/reviews";
 import Service from "@/components/service";
 import Workflow from "@/components/workflow";
-import { getTestimonials } from "@/service/Testimonial";
 
 export default async function Home() {
-  const reviews = await getTestimonials();
   return (
     <main>
       <Intro />
@@ -20,7 +18,7 @@ export default async function Home() {
       <Service />
       <Differentiator />
       <Workflow />
-      <Reviews data={reviews.data} />
+      <Reviews />
       <MarketScope />
       <Pricing />
       <Product />
