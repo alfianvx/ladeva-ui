@@ -9,10 +9,8 @@ import {
 import Faq from "../faq";
 import Closing from "../closing";
 import ProductMarketList from "../template/product-market-list";
-import { getProducts } from "@/service/Product";
 
-export default async function MainMarket() {
-  const products = await getProducts();
+export default async function MainMarket({ data }: { data: TProduct[] }) {
   return (
     <main className="h-full">
       <div className="pt-48 pb-10 px-5">
@@ -40,7 +38,7 @@ export default async function MainMarket() {
               </SelectContent>
             </Select>
           </div>
-          <ProductMarketList data={products.data} />
+          <ProductMarketList data={data} />
         </div>
       </div>
       <Faq />
