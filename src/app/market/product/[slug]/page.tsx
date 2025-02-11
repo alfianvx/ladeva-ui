@@ -2,10 +2,7 @@ import Closing from "@/components/closing";
 import Faq from "@/components/faq";
 import MarketDetail from "@/components/pages/market-detail";
 import { Button } from "@/components/ui/button";
-import { WhatsAppNumber } from "@/lib/whatsapp-number";
 import { getProductBySlug } from "@/service/Product";
-import { IconChevronLeft } from "@irsyadadl/paranoid";
-import Image from "next/image";
 import Link from "next/link";
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -23,7 +20,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </Button>
         </div>
         <MarketDetail data={product.data} />
-        <div className="max-w-5xl my-5 px-5 mx-auto md:px-0">
+        {/* <div className="max-w-5xl my-5 px-5 mx-auto md:px-0">
           <p className="py-4 text-base font-medium">Simmiliar Application</p>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
             {products.map((product, index) => (
@@ -68,7 +65,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
       <Faq />
       <Closing />
@@ -76,26 +73,26 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
 }
 
-const products = [
-  {
-    image_url: "/products/academy-mastership.svg",
-    title: "Academy Mastership",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis doloremque sit fugiat excepturi minima distinctio praesentium commodi omnis explicabo recusandae rerum porro quo nisi, quod blanditiis cupiditate neque facilis?",
-    demo_link: "/market/academy-mastership",
-  },
-  {
-    image_url: "/products/garansiindonesia.svg",
-    title: "Garansi Indonesia",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis doloremque sit fugiat excepturi minima distinctio praesentium commodi omnis explicabo recusandae rerum porro quo nisi, quod blanditiis cupiditate neque facilis?",
-    demo_link: "/market/garansi-indonesia",
-  },
-  {
-    image_url: "/products/strongneurology.svg",
-    title: "Strong Neurology",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis doloremque sit fugiat excepturi minima distinctio praesentium commodi omnis explicabo recusandae rerum porro quo nisi, quod blanditiis cupiditate neque facilis?",
-    demo_link: "/market/strong-neurology",
-  },
-];
+// const products = [
+//   {
+//     image_url: "/products/academy-mastership.svg",
+//     title: "Academy Mastership",
+//     description:
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis doloremque sit fugiat excepturi minima distinctio praesentium commodi omnis explicabo recusandae rerum porro quo nisi, quod blanditiis cupiditate neque facilis?",
+//     demo_link: "/market/academy-mastership",
+//   },
+//   {
+//     image_url: "/products/garansiindonesia.svg",
+//     title: "Garansi Indonesia",
+//     description:
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis doloremque sit fugiat excepturi minima distinctio praesentium commodi omnis explicabo recusandae rerum porro quo nisi, quod blanditiis cupiditate neque facilis?",
+//     demo_link: "/market/garansi-indonesia",
+//   },
+//   {
+//     image_url: "/products/strongneurology.svg",
+//     title: "Strong Neurology",
+//     description:
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis doloremque sit fugiat excepturi minima distinctio praesentium commodi omnis explicabo recusandae rerum porro quo nisi, quod blanditiis cupiditate neque facilis?",
+//     demo_link: "/market/strong-neurology",
+//   },
+// ];
