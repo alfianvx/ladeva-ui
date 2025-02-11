@@ -53,7 +53,7 @@ export default function Workflow() {
               />
             </div>
           </div>
-          <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 p-5 rounded-lg flex flex-col-reverse md:flex-row relative">
+          <div className="bg-[#F1F5F9] overflow-hidden hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 px-5 py-5 md:py-7 rounded-lg flex flex-col-reverse md:flex-row relative">
             <Image
               src={"/3d/desktop.svg"}
               alt="desktop-icon"
@@ -61,7 +61,7 @@ export default function Workflow() {
               height={220}
               className="mx-auto"
             />
-            <div>
+            <div className="relative z-10">
               <h1 className="mb-1 text-lg font-semibold">
                 3. Enjoy your new Apps
               </h1>
@@ -76,9 +76,9 @@ export default function Workflow() {
             <Image
               src={"/3d/carts.svg"}
               alt="carts-icon"
-              width={220}
-              height={150}
-              className="absolute right-0 hidden -bottom-7 md:block"
+              width={170}
+              height={100}
+              className="absolute right-0 hidden -bottom-6 md:block"
             />
           </div>
           <Link
