@@ -1,6 +1,8 @@
+import { getTestimonials } from "@/service/Testimonial";
 import ReviewsList from "./template/reviews-list";
 
-export default function Reviews() {
+export default async function Reviews() {
+  const reviews = await getTestimonials();
   return (
     <section className="px-5">
       <div className="mx-auto my-14 md:my-20 max-w-7xl md:px-0">
@@ -14,7 +16,7 @@ export default function Reviews() {
             be there for them and grow with their products.
           </p>
         </div>
-        <ReviewsList />
+        <ReviewsList data={reviews.data} />
       </div>
     </section>
   );
