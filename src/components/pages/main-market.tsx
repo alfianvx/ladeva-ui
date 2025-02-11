@@ -9,8 +9,10 @@ import {
 import Faq from "../faq";
 import Closing from "../closing";
 import ProductMarketList from "../template/product-market-list";
+import { getProducts } from "@/service/Product";
 
-export default function MainMarket() {
+export default async function MainMarket() {
+  const products = await getProducts();
   return (
     <main className="h-full">
       <div className="pt-48 pb-10 px-5">
@@ -38,7 +40,7 @@ export default function MainMarket() {
               </SelectContent>
             </Select>
           </div>
-          <ProductMarketList />
+          <ProductMarketList data={products.data} />
         </div>
       </div>
       <Faq />

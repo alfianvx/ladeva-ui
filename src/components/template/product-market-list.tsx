@@ -1,13 +1,15 @@
-import { getProducts } from "@/service/Product";
 import ProductMarketCard from "./product-market-card";
 import React from "react";
 
-export default async function ProductMarketList() {
-  const products = await getProducts();
+export default async function ProductMarketList({
+  data,
+}: {
+  data: TProduct[];
+}) {
   return (
     <React.Fragment>
       <div className="grid grid-cols-1 gap-5 pt-5 md:pt-10 md:grid-cols-3 pb-14">
-        {products.data.map((product, index) => (
+        {data.map((product, index) => (
           <ProductMarketCard key={index} data={product} />
         ))}
       </div>
