@@ -10,7 +10,7 @@ import Reviews from "@/components/reviews";
 import Service from "@/components/service";
 import Workflow from "@/components/workflow";
 
-export default async function Home() {
+export default function Home() {
   return (
     <main>
       <Intro />
