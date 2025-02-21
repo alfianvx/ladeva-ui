@@ -1,12 +1,20 @@
-import { getServices } from "@/service/Services";
+"use client";
 import Image from "next/image";
+import { getServices } from "@/service/Services";
+import { useQuery } from "@tanstack/react-query";
+import { ServiceSkeleton } from "../skeletons";
 
-export default async function ServiceList() {
-  const services = await getServices();
+export default function ServiceList() {
+  const { data: services, isLoading } = useQuery({
+    queryKey: ["GET - SERVICES"],
+    queryFn: getServices,
+  });
+
+  if (isLoading) return <ServiceSkeleton />;
 
   return (
     <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-      {services.data.map((service) => (
+      {services?.data.map((service) => (
         <div
           className="p-4 transition-transform duration-300 ease-in-out border rounded-lg cursor-pointer md:px-5 md:py-3 hover:border-yellow-400 hover:shadow-lg hover:transform hover:-translate-y-1"
           key={service.id}

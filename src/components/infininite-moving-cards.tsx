@@ -10,7 +10,7 @@ export const InfiniteMovingCards = ({
   pauseOnHover = true,
   className,
 }: {
-  items: TPortofolio[];
+  items: TPortofolio[] | undefined;
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -79,7 +79,7 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item) => (
+        {items?.map((item) => (
           <li key={item.id} className="cursor-pointer">
             <Image
               src={item.thumbnail_url}

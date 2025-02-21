@@ -1,3 +1,4 @@
+"use client";
 import {
   Accordion,
   AccordionContent,
@@ -5,14 +6,18 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { getFaqs } from "@/service/Faq";
+import { useQuery } from "@tanstack/react-query";
 import React from "react";
 
-export default async function FaqList() {
-  const faqs = await getFaqs();
+export default function FaqList() {
+  const { data: faqs } = useQuery({
+    queryKey: ["GET - FAQS"],
+    queryFn: getFaqs,
+  });
 
   return (
     <Accordion type="single" className="md:basis-2/4 basis-full" collapsible>
-      {faqs.data.map((faq) => (
+      {faqs?.data.map((faq) => (
         <AccordionItem key={faq.id} value={`item-${faq.id}`}>
           <AccordionTrigger className="text-sm md:text-base text-left font-semibold">
             {faq.question}

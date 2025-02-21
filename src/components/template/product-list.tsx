@@ -1,11 +1,20 @@
+"use client";
 import { getProducts } from "@/service/Product";
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
+import { ProductLogoSkeleton } from "../skeletons";
 
-export default async function ProductList() {
-  const products = await getProducts();
+export default function ProductList() {
+  const { data: products, isLoading } = useQuery({
+    queryKey: ["GET - PRODUCTS"],
+    queryFn: getProducts,
+  });
+
+  if (isLoading) return <ProductLogoSkeleton />;
+
   return (
     <div className="flex flex-wrap items-center justify-center max-w-5xl py-5 mx-auto gap-7 md:gap-9 md:py-16">
-      {products.data.map((product) => (
+      {products?.data.map((product) => (
         <Image
           key={product.id}
           src={product.logo_url}

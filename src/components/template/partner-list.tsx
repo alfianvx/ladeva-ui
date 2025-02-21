@@ -1,11 +1,20 @@
+"use client";
 import { getPartners } from "@/service/Partner";
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
+import { PartnerListSkeleton } from "../skeletons";
 
-export default async function PartnerList() {
-  const partners = await getPartners();
+export default function PartnerList() {
+  const { data: partners, isLoading } = useQuery({
+    queryKey: ["GET - PARTNERS"],
+    queryFn: getPartners,
+  });
+
+  if (isLoading) return <PartnerListSkeleton />;
+
   return (
     <div className="flex flex-wrap items-center justify-center max-w-5xl gap-14 px-5 py-14 mx-auto md:gap-9 md:py-24 md:px-0">
-      {partners.data.map((partner) => (
+      {partners?.data.map((partner) => (
         <Image
           key={partner.id}
           src={partner.logo_url}
