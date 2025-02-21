@@ -5,14 +5,19 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { getTestimonials } from "@/service/Testimonial";
 import { useQuery } from "@tanstack/react-query";
+import { TestimonialSkeleton } from "../skeletons";
 
 export default function ReviewsList() {
-  const { data: reviews, isFetching } = useQuery({
+  const {
+    data: reviews,
+    isFetching,
+    isLoading,
+  } = useQuery({
     queryKey: ["GET - TESTIMONIALS"],
     queryFn: getTestimonials,
   });
 
-  if (isFetching) return <p>Loading...</p>;
+  if (isFetching && isLoading) return <TestimonialSkeleton />;
 
   const highlightedReviews = reviews?.data.filter(
     (review) => review.is_featured === true
