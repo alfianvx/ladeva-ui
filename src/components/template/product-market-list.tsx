@@ -1,13 +1,22 @@
+"use client";
 import React from "react";
 import { getProducts } from "@/service/Product";
 import ProductMarketCard from "./product-market-card";
+import { useQuery } from "@tanstack/react-query";
+import { ProductListSkeleton } from "../skeletons";
 
-export default async function ProductMarketList() {
-  const products = await getProducts();
+export default function ProductMarketList() {
+  const { data: products, isLoading } = useQuery({
+    queryKey: ["GET - PRODUCTS"],
+    queryFn: getProducts,
+  });
+
+  if (isLoading) return <ProductListSkeleton />;
+
   return (
     <React.Fragment>
       <div className="grid grid-cols-1 gap-5 pt-5 md:pt-10 md:grid-cols-3 pb-14">
-        {products.data.map((product, index) => (
+        {products?.data.map((product, index) => (
           <ProductMarketCard key={index} data={product} />
         ))}
       </div>

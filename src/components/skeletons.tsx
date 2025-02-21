@@ -96,6 +96,73 @@ export const ProductLogoSkeleton = () => {
   );
 };
 
+export const ProductListSkeleton = () => {
+  return (
+    <div className="grid grid-cols-1 gap-5 pt-5 md:pt-10 md:grid-cols-3 pb-14">
+      <Skeleton className="p-3 w-full rounded-lg">
+        <Skeleton className="w-full overflow-hidden h-60 rounded-lg" />
+        <Skeleton className="h-5 w-1/2 rounded-lg my-3" />
+        <Skeleton className="h-5 w-full rounded-lg mb-2" />
+        <Skeleton className="h-5 w-2/3 rounded-lg" />
+        <div className="flex items-center gap-2 mt-5">
+          <Skeleton className="w-full h-10 rounded-lg" />
+          <Skeleton className="w-full h-10 rounded-lg" />
+        </div>
+      </Skeleton>
+      <Skeleton className="p-3 w-full rounded-lg">
+        <Skeleton className="w-full overflow-hidden h-60 rounded-lg" />
+        <Skeleton className="h-5 w-1/2 rounded-lg my-3" />
+        <Skeleton className="h-5 w-full rounded-lg mb-2" />
+        <Skeleton className="h-5 w-2/3 rounded-lg" />
+        <div className="flex items-center gap-2 mt-5">
+          <Skeleton className="w-full h-10 rounded-lg" />
+          <Skeleton className="w-full h-10 rounded-lg" />
+        </div>
+      </Skeleton>
+      <Skeleton className="p-3 w-full rounded-lg">
+        <Skeleton className="w-full overflow-hidden h-60 rounded-lg" />
+        <Skeleton className="h-5 w-1/2 rounded-lg my-3" />
+        <Skeleton className="h-5 w-full rounded-lg mb-2" />
+        <Skeleton className="h-5 w-2/3 rounded-lg" />
+        <div className="flex items-center gap-2 mt-5">
+          <Skeleton className="w-full h-10 rounded-lg" />
+          <Skeleton className="w-full h-10 rounded-lg" />
+        </div>
+      </Skeleton>
+      <Skeleton className="p-3 w-full rounded-lg">
+        <Skeleton className="w-full overflow-hidden h-60 rounded-lg" />
+        <Skeleton className="h-5 w-1/2 rounded-lg my-3" />
+        <Skeleton className="h-5 w-full rounded-lg mb-2" />
+        <Skeleton className="h-5 w-2/3 rounded-lg" />
+        <div className="flex items-center gap-2 mt-5">
+          <Skeleton className="w-full h-10 rounded-lg" />
+          <Skeleton className="w-full h-10 rounded-lg" />
+        </div>
+      </Skeleton>
+      <Skeleton className="p-3 w-full rounded-lg">
+        <Skeleton className="w-full overflow-hidden h-60 rounded-lg" />
+        <Skeleton className="h-5 w-1/2 rounded-lg my-3" />
+        <Skeleton className="h-5 w-full rounded-lg mb-2" />
+        <Skeleton className="h-5 w-2/3 rounded-lg" />
+        <div className="flex items-center gap-2 mt-5">
+          <Skeleton className="w-full h-10 rounded-lg" />
+          <Skeleton className="w-full h-10 rounded-lg" />
+        </div>
+      </Skeleton>
+      <Skeleton className="p-3 w-full rounded-lg">
+        <Skeleton className="w-full overflow-hidden h-60 rounded-lg" />
+        <Skeleton className="h-5 w-1/2 rounded-lg my-3" />
+        <Skeleton className="h-5 w-full rounded-lg mb-2" />
+        <Skeleton className="h-5 w-2/3 rounded-lg" />
+        <div className="flex items-center gap-2 mt-5">
+          <Skeleton className="w-full h-10 rounded-lg" />
+          <Skeleton className="w-full h-10 rounded-lg" />
+        </div>
+      </Skeleton>
+    </div>
+  );
+};
+
 export const ServiceSkeleton = () => {
   return (
     <div className="grid grid-cols-1 w-full gap-5 md:grid-cols-3">
