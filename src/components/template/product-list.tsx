@@ -13,7 +13,7 @@ export default function ProductList() {
   if (isLoading) return <ProductLogoSkeleton />;
 
   return (
-    <div className="flex flex-wrap items-center justify-center max-w-5xl py-5 mx-auto gap-7 md:gap-9 md:py-16">
+    <div className="flex flex-wrap items-center justify-center max-w-5xl py-10 mx-auto gap-14 md:py-16">
       {products?.data.map((product) => (
         <Image
           key={product.id}
@@ -23,7 +23,7 @@ export default function ProductList() {
           width={100}
           height={100}
           quality={100}
-          className="w-28 h-18 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer"
+          className="w-32 h-18 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer"
         />
       ))}
     </div>
