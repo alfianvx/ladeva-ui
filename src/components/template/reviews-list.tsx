@@ -23,8 +23,6 @@ export default function ReviewsList() {
     (review) => review.is_featured === true
   );
 
-  console.log(reviews);
-
   return (
     <React.Fragment>
       {highlightedReviews?.map((review) => (

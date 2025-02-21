@@ -72,7 +72,7 @@ export const ProjectSkeleton = () => {
 
 export const PartnerListSkeleton = () => {
   return (
-    <div className="flex flex-wrap items-center justify-center max-w-5xl gap-14 px-5 py-14 mx-auto md:gap-12 md:py-24 md:px-0">
+    <div className="flex flex-wrap items-center justify-center max-w-5xl py-5 mx-auto gap-7 md:gap-14 md:py-16">
       <Skeleton className="h-20 w-20 rounded-full" />
       <Skeleton className="h-20 w-20 rounded-full" />
       <Skeleton className="h-20 w-20 rounded-full" />

@@ -15,7 +15,7 @@ export default function Workflow() {
             business problems.
           </p>
         </div>
-        <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-4 md:gap-5">
+        <div className="grid w-full grid-cols-1 gap-y-5 md:grid-cols-4 md:gap-5">
           <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 md:col-span-1 p-5 rounded-lg">
             <h1 className="mb-1 text-lg font-semibold">
               1. Get in touch with our team
@@ -84,7 +84,7 @@ export default function Workflow() {
           <Link
             href={"/"}
             className="bg-gradient-to-r from-[#A18CD1] to-[#FBC2EB] cursor-pointer 
-  rounded-lg col-span-1 flex items-center justify-center w-auto h-40 md:h-auto"
+  rounded-lg flex items-center justify-center w-full h-40 md:h-auto"
           >
             <span className="text-xl font-medium text-white">
               Any Question?
