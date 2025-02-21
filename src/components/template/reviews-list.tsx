@@ -1,17 +1,28 @@
+"use client";
+
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { getTestimonials } from "@/service/Testimonial";
+import { useQuery } from "@tanstack/react-query";
 
-export default async function ReviewsList() {
-  const reviews = await getTestimonials();
-  const highlightedReviews = reviews.data.filter(
+export default function ReviewsList() {
+  const { data: reviews, isFetching } = useQuery({
+    queryKey: ["GET - TESTIMONIALS"],
+    queryFn: getTestimonials,
+  });
+
+  if (isFetching) return <p>Loading...</p>;
+
+  const highlightedReviews = reviews?.data.filter(
     (review) => review.is_featured === true
   );
 
+  console.log(reviews);
+
   return (
     <React.Fragment>
-      {highlightedReviews.map((review) => (
+      {highlightedReviews?.map((review) => (
         <div
           key={review.id}
           className="w-full p-5 bg-gradient-to-r my-4 from-[#FF5858] to-[#F09819] rounded-lg"
@@ -47,7 +58,7 @@ export default async function ReviewsList() {
         </div>
       ))}
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-5">
-        {reviews.data
+        {reviews?.data
           .filter((review) => review.is_featured === false)
           .map((review) => (
             <div key={review.id} className="w-full p-5 border rounded-lg">

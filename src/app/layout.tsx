@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import Provider from "@/components/provider";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -92,7 +93,7 @@ export default function RootLayout({
         )}
       >
         <Header />
-        {children}
+        <Provider>{children}</Provider>
         <Footer />
       </body>
     </html>
