@@ -5,12 +5,12 @@ import { WhatsAppNumber } from "@/lib/whatsapp-number";
 
 export default function ProductMarketCard({ data }: { data: TProduct }) {
   return (
-    <div className="bg-[#F1F5F9] border border-stone-100 overflow-hidden rounded-2xl group hover:cursor-pointer">
-      <div className="w-full overflow-hidden h-60">
+    <div className="bg-[#F1F5F9] border border-stone-100 overflow-hidden rounded-xl group hover:cursor-pointer">
+      <div className="w-full overflow-hidden h-80 flex items-center justify-center bg-white">
         <Image
           src={data.thumbnail_url}
           alt={data.name}
-          className="object-contain w-full h-full transition-transform group-hover:scale-105"
+          className="object-contain w-full h-60 transition-transform group-hover:scale-105"
           width={300}
           height={300}
         />
@@ -21,13 +21,13 @@ export default function ProductMarketCard({ data }: { data: TProduct }) {
         <div className="flex items-center gap-2 mt-5">
           <Button
             asChild
-            className="w-full bg-[#FFE8E3] hover:bg-[#FFE8E3] text-ladeva shadow-none"
+            className="w-full bg-[#FFE8E3] hover:bg-[#FFE8E3] text-ladeva shadow-none rounded-lg"
           >
             <Link href={`/market/product/${data.slug}`}>Demo</Link>
           </Button>
           <Button
             asChild
-            className="w-full text-white bg-ladeva hover:bg-ladeva shadow-none"
+            className="w-full text-white bg-ladeva hover:bg-ladeva shadow-none rounded-lg"
           >
             <Link
               target="_blank"

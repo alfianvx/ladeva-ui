@@ -24,10 +24,29 @@ export const InfiniteMovingCards = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const [start, setStart] = useState(false);
+
+  // Create multiple copies of items to ensure seamless looping
+  const getLoopedItems = () => {
+    if (!items || items.length === 0) return [];
+
+    // Calculate how many copies we need for seamless loop
+    const minItemsNeeded = 8; // Minimum items needed for smooth scrolling
+    const copies = Math.ceil(minItemsNeeded / items.length);
+
+    // Create multiple copies of the array
+    const loopedItems = [];
+    for (let i = 0; i < copies; i++) {
+      loopedItems.push(...items);
+    }
+
+    return loopedItems;
+  };
+
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
+      // Clone all items for seamless loop
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         if (scrollerRef.current) {
@@ -62,7 +81,7 @@ export const InfiniteMovingCards = ({
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "100s");
       }
     }
   };
@@ -79,17 +98,30 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items?.map((item) => (
-          <li key={item.id} className="cursor-pointer">
-            <Image
-              src={item.thumbnail_url}
-              alt="product-image"
-              className=""
-              width={400}
-              height={400}
-              priority
-              quality={100}
-            />
+        {getLoopedItems().map((item, index) => (
+          <li
+            key={`${item.id}-${index}`}
+            className="cursor-pointer flex-shrink-0"
+          >
+            <div className="w-80 h-60 md:w-96 md:h-72 relative rounded-lg overflow-hidden bg-gray-100">
+              <Image
+                src={item.thumbnail_url}
+                alt={`${item.name || "Portfolio item"} - Project showcase`}
+                className="object-cover transition-transform duration-300 hover:scale-105"
+                fill
+                sizes="(max-width: 768px) 8 40px, 768px"
+                quality={100}
+                loading={index < 4 ? "eager" : "lazy"} // Load first 4 eagerly, rest lazily
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0eH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABsRAAMBAQEBAAAAAAAAAAAAAAABAhEDITES/9oADAMBAAIRAxEAPwC9jLBqr2OcUtJqNyJ3l3x7PkOceR/HO2kd13V9nnCLcffnUzrIe1G8mUWd+fUYEJHn7f0M4uxOHy"
+              />
+              {/* Optional: Add overlay with project info */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="text-sm font-medium truncate">{item.name}</p>
+                </div>
+              </div>
+            </div>
           </li>
         ))}
       </ul>

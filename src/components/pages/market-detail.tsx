@@ -14,15 +14,19 @@ export default function MarketDetail({ data }: { data: TProduct }) {
         </div>
       </div>
       <div className="flex flex-col items-center max-w-5xl gap-2 px-5 py-4 mx-auto md:my-10 md:flex-row md:px-0">
-        <Image
-          src={data.thumbnail_url}
-          alt={data.name}
-          className="object-contain w-full h-80"
-          priority
-          quality={100}
-          width={100}
-          height={100}
-        />
+        <div className="w-full h-80 md:h-96 relative bg-white border-gray-100">
+          <Image
+            src={data.thumbnail_url}
+            alt={`${data.name} - High quality product image`}
+            className="object-contain"
+            fill
+            sizes="(max-width: 768px) 100vw, 80vw"
+            priority
+            quality={95}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0eH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABsRAAMBAQEBAAAAAAAAAAAAAAABAhEDITES/9oADAMBAAIRAxEAPwC9jLBqr2OcUtJqNyJ3l3x7PkOceR/HO2kd13V9nnCLcffnUzrIe1G8mUWd+fUYEJHn7f0M4uxOHy"
+          />
+        </div>
       </div>
       <div className="max-w-5xl px-5 mx-auto my-3 md:px-0">
         <div

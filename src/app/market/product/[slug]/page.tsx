@@ -72,27 +72,3 @@ export default async function Page({ params }: { params: { slug: string } }) {
     </main>
   );
 }
-
-// const products = [
-//   {
-//     image_url: "/products/academy-mastership.svg",
-//     title: "Academy Mastership",
-//     description:
-//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis doloremque sit fugiat excepturi minima distinctio praesentium commodi omnis explicabo recusandae rerum porro quo nisi, quod blanditiis cupiditate neque facilis?",
-//     demo_link: "/market/academy-mastership",
-//   },
-//   {
-//     image_url: "/products/garansiindonesia.svg",
-//     title: "Garansi Indonesia",
-//     description:
-//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis doloremque sit fugiat excepturi minima distinctio praesentium commodi omnis explicabo recusandae rerum porro quo nisi, quod blanditiis cupiditate neque facilis?",
-//     demo_link: "/market/garansi-indonesia",
-//   },
-//   {
-//     image_url: "/products/strongneurology.svg",
-//     title: "Strong Neurology",
-//     description:
-//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nobis doloremque sit fugiat excepturi minima distinctio praesentium commodi omnis explicabo recusandae rerum porro quo nisi, quod blanditiis cupiditate neque facilis?",
-//     demo_link: "/market/strong-neurology",
-//   },
-// ];

@@ -18,7 +18,7 @@ export default function Projects() {
       <InfiniteMovingCards
         items={portofolios?.data}
         direction="left"
-        speed="fast"
+        speed="slow"
         pauseOnHover={false}
       />
       <InfiniteMovingCards
