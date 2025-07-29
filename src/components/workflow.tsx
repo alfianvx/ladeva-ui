@@ -6,9 +6,9 @@ export default function Workflow() {
     <section id="how-it-work" className="px-5 scroll-m-32">
       <div className="flex flex-col items-center justify-center mx-auto my-14 md:my-20  max-w-7xl scroll-m-32">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-center md:text-4xl">
+          <h2 className="text-2xl font-bold text-center md:text-4xl">
             How does it work<span className="text-ladeva">.</span>
-          </h1>
+          </h2>
           <p className="max-w-4xl py-3 tracking-wide leading-6 text-sm text-center md:py-5">
             No overcomplicated workflow, no unnecessary bureaucracy or pappers.
             Let&apos;s go straight to realizing your ideas and tackling your
@@ -17,9 +17,9 @@ export default function Workflow() {
         </div>
         <div className="grid w-full grid-cols-1 gap-y-5 md:grid-cols-4 md:gap-5">
           <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 md:col-span-1 p-5 rounded-lg">
-            <h1 className="mb-1 text-lg font-semibold">
+            <h3 className="mb-1 text-lg font-semibold">
               1. Get in touch with our team
-            </h1>
+            </h3>
             <p className="text-sm">
               click on the button to contact our team, and we will respond as
               soon as possible.
@@ -34,9 +34,9 @@ export default function Workflow() {
             </div>
           </div>
           <div className="bg-[#F1F5F9] hover:bg-[#FFE8E3] transition cursor-pointer duration-200 ease-in-out col-span-3 p-5 rounded-lg">
-            <h1 className="mb-1 text-lg font-semibold">
+            <h3 className="mb-1 text-lg font-semibold">
               2. Add your design Apps
-            </h1>
+            </h3>
             <p className="text-sm">
               After you contact our team. we will set to discuss about the
               application that will be made, you will get details of the total
@@ -62,9 +62,9 @@ export default function Workflow() {
               className="mx-auto"
             />
             <div className="relative z-10">
-              <h1 className="mb-1 text-lg font-semibold">
+              <h3 className="mb-1 text-lg font-semibold">
                 3. Enjoy your new Apps
-              </h1>
+              </h3>
               <p className="text-sm">
                 After you contact our team. we will set to discuss about the
                 application that will be made, you will get details of the total

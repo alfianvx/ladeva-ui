@@ -5,10 +5,10 @@ import Link from "next/link";
 export default function Closing() {
   return (
     <section className="flex flex-col items-center justify-center w-full px-5 py-10 mx-auto bg-black md:py-24 md:px-0">
-      <h1 className="max-w-4xl leading-relaxed py-5 text-3xl font-extrabold text-center text-white md:text-5xl">
+      <h2 className="max-w-4xl leading-relaxed py-5 text-3xl font-extrabold text-center text-white md:text-5xl">
         Digitalize your business with us just one click away
         <span className="text-ladeva">.</span>
-      </h1>
+      </h2>
       <div className="grid items-center my-5 space-y-4 md:space-y-0 md:grid-cols-3">
         {offers.map((offer) => (
           <div

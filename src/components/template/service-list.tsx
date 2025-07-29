@@ -20,18 +20,20 @@ export default function ServiceList() {
           key={service.id}
         >
           <div className="flex mb-3 items-center gap-3 transition-transform duration-300 ease-in-out">
-            <Image
-              src={service.icon_url}
-              className="transition-transform duration-300 ease-in-out w-14 md:w-auto"
-              alt="3d-icon"
-              width={50}
-              height={50}
-              quality={100}
-              priority
-            />
-            <h1 className="text-sm font-bold transition-transform duration-300 ease-in-out md:text-base">
+            <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 relative">
+              <Image
+                src={service.icon_url}
+                className="transition-transform duration-300 ease-in-out object-contain"
+                alt={`${service.title} service icon`}
+                fill
+                sizes="(max-width: 768px) 48px, 56px"
+                quality={100}
+                priority
+              />
+            </div>
+            <h3 className="text-sm font-bold transition-transform duration-300 ease-in-out md:text-base">
               {service.title}
-            </h1>
+            </h3>
           </div>
           <p className="text-xs leading-7 transition-transform tracking-wide duration-300 ease-in-out md:text-sm">
             {service.description}

@@ -26,9 +26,9 @@ export default function PricingList() {
             key={pricing.id}
             className="bg-[#F1F5F9] p-5 rounded-2xl col-span-5 md:col-span-2"
           >
-            <h1 className="mb-2 text-3xl font-bold">
+            <h3 className="mb-2 text-3xl font-bold">
               Free <span className="text-stone-400">Consul</span>
-            </h1>
+            </h3>
             <p className="text-sm">Don&apos;t hesitate, contant us</p>
             <ul className="flex flex-col gap-3 my-6 md:my-8">
               {pricing.offer.map((item, index) => (
@@ -65,7 +65,7 @@ export default function PricingList() {
           key={pricing.id}
           className="bg-[#ED6244] text-white p-5 rounded-2xl col-span-5 md:col-span-3"
         >
-          <h1 className="mb-2 text-2xl font-bold">{pricing.title}</h1>
+          <h3 className="mb-2 text-2xl font-bold">{pricing.title}</h3>
           <p className="text-sm">{pricing.description}</p>
           <ul className="grid grid-cols-1 gap-3 my-6 md:my-8 md:grid-cols-2 md:grid-rows-3">
             {pricing.offer.map((item, index) => (

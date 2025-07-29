@@ -73,3 +73,68 @@
     text-wrap: balance;
   }
 }
+
+/* Fix for H1 font-size in sectioning elements to prevent browser warnings */
+@layer base {
+  /* Ensure all H1 elements have explicit font sizes */
+  h1 {
+    font-size: 2rem; /* Default size for H1 */
+    line-height: 1.2;
+  }
+
+  /* Responsive H1 sizes */
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  /* Ensure proper heading hierarchy */
+  section h1,
+  article h1,
+  aside h1,
+  nav h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    section h1,
+    article h1,
+    aside h1,
+    nav h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  /* Override for specific cases where Tailwind classes should take precedence */
+  .text-3xl {
+    font-size: 1.875rem !important;
+  }
+
+  .text-4xl {
+    font-size: 2.25rem !important;
+  }
+
+  .text-5xl {
+    font-size: 3rem !important;
+  }
+
+  .text-6xl {
+    font-size: 3.75rem !important;
+  }
+
+  @media (min-width: 768px) {
+    .md\\:text-4xl {
+      font-size: 2.25rem !important;
+    }
+
+    .md\\:text-5xl {
+      font-size: 3rem !important;
+    }
+
+    .md\\:text-6xl {
+      font-size: 3.75rem !important;
+    }
+  }
+}
